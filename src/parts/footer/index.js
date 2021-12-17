@@ -36,7 +36,6 @@ export default function Footer() {
                         </Stack>
                         <Stack spacing={{base:"3rem", md:"5rem"}} alignItems="center">
                             <Image src={logo_bappenas} width="16rem" minWidth="5rem"/>
-                            <Image src={logo_csgar} width="14rem" minWidth="5rem"/>
                         </Stack>
                     </Stack>
                 </Stack>
