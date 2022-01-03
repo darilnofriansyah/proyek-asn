@@ -39,8 +39,8 @@ export default function Header() {
                         </Stack>
                     </MenuButton>
                     <MenuList>
-                        <MenuItem>Top Down</MenuItem>
-                        <MenuItem>Bottom Up</MenuItem>
+                        <MenuItem><a href='/metodologi/topdown'>Top Down</a></MenuItem>
+                        <MenuItem><a href='/metodologi/bottomup'>Bottom Up</a></MenuItem>
                         <MenuItem>Dovetailing</MenuItem>
                     </MenuList>
                 </Menu>
