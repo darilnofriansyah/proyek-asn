@@ -22,11 +22,9 @@ export default function Footer() {
                     <Stack justifyContent="center" direction={{base: "column", md:"row"}} spacing={{base:"3rem", lg:"10rem"}}>
                         <Stack spacing={{base:"3rem", md:"5rem"}} alignItems="center">
                             <Image src={logo_panrb} width="16rem" minWidth="5rem"/>
-                            <Image src={logo_ui} width="16rem" minWidth="5rem"/>
                         </Stack>
                         <Stack spacing={{base:"3rem", md:"5rem"}} alignItems="center">
                             <Image src={logo_kasn} width="7rem" minWidth="3rem"/>
-                            <Image src={logo_dayamakara} width="16rem" minWidth="5rem"/>
                         </Stack>
                     </Stack>
                     <Stack justifyContent="center" direction={{base: "column", md:"row"}} spacing={{base:"3rem", lg:"10rem"}}>

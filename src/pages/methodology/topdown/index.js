@@ -13,7 +13,7 @@ import chart_down from "../../../assets/images/icon/chart_down.png"
 
 export default function Topdown() {
   return (
-    <Flex pt="4rem" px="2rem">
+    <Flex pt="4rem" px="4rem">
       {/* Metodologi Top Down */}
       <Stack spacing="2rem">
         <Heading textColor="red.600" fontSize="6xl">

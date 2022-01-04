@@ -6,6 +6,7 @@ import {
 import About from '../pages/about';
 import Home from '../pages/home';
 import Bottomup from '../pages/methodology/bottomup';
+import Dovetailing from '../pages/methodology/dovetailing';
 import Topdown from '../pages/methodology/topdown';
 
 const BaseRouter = () => {
@@ -15,6 +16,7 @@ const BaseRouter = () => {
             <Route exact path='/about' element={<About/>}/>
             <Route exact path='/metodologi/topdown' element={<Topdown/>}/>
             <Route exact path='/metodologi/bottomup' element={<Bottomup/>}/>
+            <Route exact path='/metodologi/dovetailing' element={<Dovetailing/>}/>
         </Routes>
     )
 }
