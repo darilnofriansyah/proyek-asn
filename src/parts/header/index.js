@@ -3,6 +3,7 @@ import { Image } from "@chakra-ui/image";
 import { Box, Flex, Heading, Spacer, Stack, Text } from "@chakra-ui/layout";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo/logo_panrb.png";
 
 export default function Header() {
@@ -53,6 +54,9 @@ export default function Header() {
             </Stack>
           </MenuButton>
           <MenuList>
+            <a href="/metodologi/overview">
+              <MenuItem>Overview</MenuItem>
+            </a>
             <a href="/metodologi/topdown">
               <MenuItem>Top Down</MenuItem>
             </a>
@@ -77,12 +81,20 @@ export default function Header() {
             </Stack>
           </MenuButton>
           <MenuList>
-            <MenuItem>COL Long List</MenuItem>
-            <MenuItem>Findings</MenuItem>
-            <MenuItem>Download Laporan</MenuItem>
+            <Link to="/">
+              <MenuItem>COL Long List</MenuItem>
+            </Link>
+            <Link to="/">
+              <MenuItem>Findings</MenuItem>
+            </Link>
+            <Link to="/download">
+              <MenuItem>Download Laporan</MenuItem>
+            </Link>
           </MenuList>
         </Menu>
-        <Heading fontSize={{ base: "xl", xl: "2xl" }}>Kontak</Heading>
+        <Heading fontSize={{ base: "xl", xl: "2xl" }}>
+          <a href="/contact">Kontak</a>
+        </Heading>
         <Heading fontSize={{ base: "xl", xl: "2xl" }}>FAQ</Heading>
       </Stack>
     </Flex>
