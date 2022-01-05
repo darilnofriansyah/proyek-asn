@@ -19,39 +19,6 @@ export default function Footer() {
             COL ASN Indonesia merupakan hasil kolaborasi antara:
           </Heading>
         </Flex>
-        {/* <Stack
-          spacing={{ base: "3rem", lg: "5rem", xl: "10rem" }}
-          py={{ base: "4rem", lg: "3rem" }}
-          justifyContent="center"
-          px={{ base: "3rem", lg: "9rem" }}
-          direction={{ base: "column", xl: "row" }}
-        >
-          <Stack
-            justifyContent="center"
-            direction={{ base: "column", md: "row" }}
-            spacing={{ base: "3rem", lg: "10rem" }}
-          >
-            <Stack spacing={{ base: "3rem", md: "5rem" }} alignItems="center">
-              <Image src={logo_panrb} width="16rem" minWidth="5rem" />
-            </Stack>
-            <Stack spacing={{ base: "3rem", md: "5rem" }} alignItems="center">
-              <Image src={logo_kasn} width="7rem" minWidth="3rem" />
-            </Stack>
-          </Stack>
-          <Stack
-            justifyContent="center"
-            direction={{ base: "column", md: "row" }}
-            spacing={{ base: "3rem", lg: "10rem" }}
-          >
-            <Stack spacing={{ base: "3rem", md: "5rem" }} alignItems="center">
-              <Image src={logo_bkn} width="13rem" minWidth="5rem" />
-              <Image src={logo_lanri} width="13rem" minWidth="5rem" />
-            </Stack>
-            <Stack spacing={{ base: "3rem", md: "5rem" }} alignItems="center">
-              <Image src={logo_bappenas} width="16rem" minWidth="5rem" />
-            </Stack>
-          </Stack>
-        </Stack> */}
         <Flex justifyContent="center" alignItems="center" direction={{ base: "column", xl: "row" }}>
           <Stack direction="row" alignItems="center" direction={{ base: "column", md: "row" }}>
             <Image m="4rem" src={logo_panrb} width="16rem" minWidth="5rem" />
