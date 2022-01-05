@@ -51,7 +51,7 @@ export default function About() {
             </Text>
             <Divider />
             <Text fontSize="2xl">
-              Jabatan yang memerlukan keahlian yang sangat khusus dan/atau
+              b. Jabatan yang memerlukan keahlian yang sangat khusus dan/atau
               langka.
             </Text>
           </Stack>

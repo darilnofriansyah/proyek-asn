@@ -27,10 +27,10 @@ export default function Topdown() {
         <Text fontWeight="400" fontSize="4xl">
           Indikator Pendekatan Top Down
         </Text>
-        <SimpleGrid px="10rem" spacing="10rem" columns={3}>
+        <SimpleGrid px="5rem" spacing={{base: "2rem", xl: "5rem"}} columns={{base: 1, xl: 3}}>
           <Stack
             bgColor="yellowPrimary"
-            borderRadius="10px 10px 0px 0px"
+            borderRadius={{base: "10px 10px 10px 10px", xl: "10px 10px 0px 0px"}}
             pb="2rem"
           >
             <Flex
@@ -62,7 +62,7 @@ export default function Topdown() {
           </Stack>
           <Stack
             bgColor="yellowPrimary"
-            borderRadius="10px 10px 0px 0px"
+            borderRadius={{base: "10px 10px 10px 10px", xl: "10px 10px 0px 0px"}}
             pb="2rem"
           >
             <Flex
@@ -92,8 +92,9 @@ export default function Topdown() {
           </Stack>
           <Stack
             bgColor="yellowPrimary"
-            borderRadius="10px 10px 0px 0px"
+            borderRadius={{base: "10px 10px 10px 10px", xl: "10px 10px 0px 0px"}}
             pb="2rem"
+            mb={{base: "2rem", xl:"0"}}
           >
             <Flex
               borderRadius="10px 10px 0px 0px"

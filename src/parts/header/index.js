@@ -77,14 +77,13 @@ export default function Header() {
             </Stack>
           </MenuButton>
           <MenuList>
-            <MenuItem>COL Matrix</MenuItem>
             <MenuItem>COL Long List</MenuItem>
             <MenuItem>Findings</MenuItem>
+            <MenuItem>Download Laporan</MenuItem>
           </MenuList>
         </Menu>
         <Heading fontSize={{ base: "xl", xl: "2xl" }}>Kontak</Heading>
         <Heading fontSize={{ base: "xl", xl: "2xl" }}>FAQ</Heading>
-        <Heading fontSize={{ base: "xl", xl: "2xl" }}>Download Laporan</Heading>
       </Stack>
     </Flex>
   );
