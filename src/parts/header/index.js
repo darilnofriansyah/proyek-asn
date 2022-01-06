@@ -87,9 +87,6 @@ export default function Header() {
             <Link to="/jabatankritikal">
               <MenuItem>Daftar Jabatan Kritikal</MenuItem>
             </Link>
-            <Link to="/download">
-              <MenuItem>Download Laporan</MenuItem>
-            </Link>
           </MenuList>
         </Menu>
         <Heading fontSize={{ base: "xl", xl: "2xl" }}>

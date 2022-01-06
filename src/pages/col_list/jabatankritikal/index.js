@@ -1,4 +1,4 @@
-import { Button, Flex, Link } from "@chakra-ui/react";
+import { Button, Flex, Heading, Link } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import CustomTable from "../../../components/table";
 import Papa from "papaparse";
@@ -37,21 +37,21 @@ export default function JabatanKritikal() {
       Header: "Nama Jabatan",
       accessor: "Nama Jabatan",
     },
-        // {
-        //   Header: "",
-        //   accessor: "button",
-        //   Cell: ({ cell }) => {
-        //     return (
-        //       <Button
-        //       // as={Link}
-        //       // to={`/candidateselection/detail/${idJobVacancy}/${cell.row.original.id_job_application}`}
-        //       // variant="link"
-        //       >
-        //         Detail
-        //       </Button>
-        //     );
-        //   },
-        // },
+    // {
+    //   Header: "",
+    //   accessor: "button",
+    //   Cell: ({ cell }) => {
+    //     return (
+    //       <Button
+    //       // as={Link}
+    //       // to={`/candidateselection/detail/${idJobVacancy}/${cell.row.original.id_job_application}`}
+    //       // variant="link"
+    //       >
+    //         Detail
+    //       </Button>
+    //     );
+    //   },
+    // },
   ];
 
   return (
@@ -60,6 +60,7 @@ export default function JabatanKritikal() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
+          <Heading mb="4rem">Daftar Jabatan Kritikal</Heading>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>
       )}

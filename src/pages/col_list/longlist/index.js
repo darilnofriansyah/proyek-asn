@@ -1,4 +1,4 @@
-import { Button, Flex, Link } from "@chakra-ui/react";
+import { Button, Flex, Heading, Link } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import CustomTable from "../../../components/table";
 import Papa from "papaparse";
@@ -76,6 +76,7 @@ export default function LongList() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
+          <Heading mb="4rem">Long List JF dan FA</Heading>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>
       )}
