@@ -4,7 +4,8 @@ import {
     Route,
     Redirect } from "react-router-dom";
 import About from '../pages/about';
-import DownloadLaporan from '../pages/col_list/download';
+import JabatanKritikal from '../pages/col_list/jabatankritikal';
+import LongList from '../pages/col_list/longlist';
 import Contact from '../pages/contact';
 import Home from '../pages/home';
 import Bottomup from '../pages/methodology/bottomup';
@@ -23,7 +24,8 @@ const BaseRouter = () => {
             <Route exact path='/metodologi/dovetailing' element={<Dovetailing/>}/>
             <Route exact path="/metodologi/overview" element={<Overview/>}/>
             {/* COL LIST */}
-            <Route exact path="/download" element={<DownloadLaporan/>}/>
+            <Route exact path='/longlist' element={<LongList/>}/>
+            <Route exact path='/jabatankritikal' element={<JabatanKritikal/>}/>
             <Route exact path='/contact' element={<Contact/>}/>
         </Routes>
     )

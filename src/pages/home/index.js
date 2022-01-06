@@ -1,8 +1,5 @@
 import {
-  Box,
-  Image,
   Text,
-  Button,
   Stack,
   Flex,
   Grid,
