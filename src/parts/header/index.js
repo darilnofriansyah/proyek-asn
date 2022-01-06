@@ -81,14 +81,11 @@ export default function Header() {
             </Stack>
           </MenuButton>
           <MenuList>
-            <Link to="/">
-              <MenuItem>COL Long List</MenuItem>
+            <Link to="/longlist">
+              <MenuItem>Long List JF dan JA</MenuItem>
             </Link>
-            <Link to="/">
-              <MenuItem>Findings</MenuItem>
-            </Link>
-            <Link to="/download">
-              <MenuItem>Download Laporan</MenuItem>
+            <Link to="/jabatankritikal">
+              <MenuItem>Daftar Jabatan Kritikal</MenuItem>
             </Link>
           </MenuList>
         </Menu>
