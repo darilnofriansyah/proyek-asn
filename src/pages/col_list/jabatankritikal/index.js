@@ -18,7 +18,6 @@ export default function JabatanKritikal() {
       const rows = results.data; // array of objects
       setData(rows);
       setLoading(false);
-      console.log(rows);
     }
     if (loading) {
       getData();
@@ -32,10 +31,12 @@ export default function JabatanKritikal() {
       Cell: (props) => {
         return <div>{props.row.index + 1}</div>;
       },
+      disableFilters: true
     },
     {
       Header: "Nama Jabatan",
       accessor: "Nama Jabatan",
+      disableFilters: true
     },
     // {
     //   Header: "",
