@@ -31,10 +31,12 @@ export default function JabatanKritikal() {
       Cell: (props) => {
         return <div>{props.row.index + 1}</div>;
       },
+      disableFilters: true
     },
     {
       Header: "Nama Jabatan",
       accessor: "Nama Jabatan",
+      disableFilters: true
     },
     // {
     //   Header: "",
