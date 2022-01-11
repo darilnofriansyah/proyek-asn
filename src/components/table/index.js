@@ -18,6 +18,7 @@ import {
   useSortBy,
   useGlobalFilter,
   usePagination,
+  useFilters,
 } from "react-table";
 import { GlobalFilter } from "../globalfilter";
 
@@ -44,6 +45,7 @@ export default function CustomTable({ customColumns, customData }) {
       columns,
       data,
     },
+    useFilters,
     useGlobalFilter,
     useSortBy,
     usePagination
@@ -61,8 +63,9 @@ export default function CustomTable({ customColumns, customData }) {
           {headerGroups.map((headerGroups) => (
             <Tr {...headerGroups.getHeaderGroupProps()}>
               {headerGroups.headers.map((column) => (
-                <Th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                <Th>
                   {column.render("Header")}
+                  <div>{column.canFilter ? column.render('Filter') : null}</div>
                 </Th>
               ))}
             </Tr>

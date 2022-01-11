@@ -18,7 +18,6 @@ export default function JabatanKritikal() {
       const rows = results.data; // array of objects
       setData(rows);
       setLoading(false);
-      console.log(rows);
     }
     if (loading) {
       getData();

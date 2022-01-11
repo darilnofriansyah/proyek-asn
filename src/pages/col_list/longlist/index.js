@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import CustomTable from "../../../components/table";
 import Papa from "papaparse";
 import LoadingSpinner from "../../../components/loadingspinner";
+import ColumnFilter from "../../../components/columnfilter";
 
 export default function LongList() {
   const [data, setData] = useState([]);
@@ -32,26 +33,32 @@ export default function LongList() {
       Cell: (props) => {
         return <div>{props.row.index + 1}</div>;
       },
+      disableFilters: true
     },
     {
       Header: "Jabatan Kritikal",
       accessor: "Jabatan Kritikal",
+      disableFilters: true
     },
     {
       Header: "Top Down",
       accessor: "Top Down",
+      Filter: ColumnFilter,
     },
     {
       Header: "Jenis Jabatan",
       accessor: "Jenis Jabatan",
+      Filter: ColumnFilter,
     },
     {
       Header: "Nilai Tingkat Kritis",
       accessor: "Nilai Tingkat Kritis",
+      disableFilters: true
     },
     {
       Header: "Bottom Up",
       accessor: "Bottom Up",
+      Filter: ColumnFilter,
     },
     // {
     //   Header: "",
