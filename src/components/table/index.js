@@ -45,8 +45,8 @@ export default function CustomTable({ customColumns, customData }) {
       columns,
       data,
     },
-    useFilters,
     useGlobalFilter,
+    useFilters,
     useSortBy,
     usePagination
   );
