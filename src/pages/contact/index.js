@@ -20,6 +20,7 @@ export default function Contact() {
           <Heading mb="2rem" fontSize="5xl">
             Contact Us
           </Heading>
+          <Text fontSize="2xl">Deputi SDM Aparatur</Text>
           <Text fontSize="2xl">
             Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi
           </Text>

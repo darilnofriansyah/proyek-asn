@@ -4,12 +4,13 @@ import {
   Flex,
   Heading,
   Image,
+  Link,
   SimpleGrid,
   Stack,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import tiga_jabatan_kritikal from "../../assets/images/chart/tiga-kriteria.png"
+import tiga_jabatan_kritikal from "../../assets/images/chart/tiga-kriteria.png";
 
 export default function About() {
   return (
@@ -18,26 +19,24 @@ export default function About() {
         <Flex direction="column">
           <Heading
             padding="1rem"
+            px="4rem"
             borderRadius="50px"
             bgColor="yellowPrimary"
             fontSize="6xl"
             mb="2rem"
           >
-            Konsep Daftar Jabatan Kritikal
+            Jabatan Kritikal
           </Heading>
-          <Text mb="2rem" px="4rem" fontSize="3xl">
-            Daftar Jabatan Kritikal, adalah peta yang menggambarkan ketersediaan
-            tenaga kerja yang terampil dan ketidakseimbangan antara kebutuhan
-            dan ketersediaan tenaga kerja terampil.
-          </Text>
           <Text
             mb="3rem"
-            px="4rem"
+            mx="4rem"
             fontSize="3xl"
             color="red.600"
             fontWeight="500"
           >
-            Peraturan Menteri PAN-RB Nomor 3 Tahun 2020
+            <a href="https://www.sdm.kemenkeu.go.id/peraturan/doc/PERMENPAN%20NO%203%20TAHUN%202020.pdf">
+              Peraturan Menteri PAN-RB Nomor 3 Tahun 2020:
+            </a>
           </Text>
           <Stack mb="3rem" px="4rem" spacing="2rem">
             <Text fontSize="2xl">
@@ -92,7 +91,7 @@ export default function About() {
               </Stack>
             </Stack>
           </Stack>
-          <Image src={tiga_jabatan_kritikal}/>
+          <Image src={tiga_jabatan_kritikal} />
         </Flex>
       </SimpleGrid>
     </Flex>
