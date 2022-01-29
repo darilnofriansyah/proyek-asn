@@ -35,7 +35,7 @@ export default function Header() {
           </MenuButton>
           <MenuList>
             <a href="/about">
-              <MenuItem>About COL ASN</MenuItem>
+              <MenuItem>Tentang Ragam Okupasi Kritikal ASN</MenuItem>
             </a>
           </MenuList>
         </Menu>
@@ -76,7 +76,7 @@ export default function Header() {
               spacing={1}
               direction="row"
             >
-              <Heading fontSize={{ base: "xl", xl: "2xl" }}>COL List</Heading>
+              <Heading fontSize={{ base: "xl", xl: "2xl" }}>Okupasi Kritikal</Heading>
               <ChevronDownIcon />
             </Stack>
           </MenuButton>
@@ -87,12 +87,31 @@ export default function Header() {
             <Link to="/jabatankritikal">
               <MenuItem>Daftar Jabatan Kritikal</MenuItem>
             </Link>
+            <Link to="/jabatankritikal">
+              <MenuItem>Tugas Fungsi dan Nomor PermenPAN</MenuItem>
+            </Link>
+            <Link to="/jabatankritikal">
+              <MenuItem>Future Jobs</MenuItem>
+            </Link>
+            <Link to="/jabatankritikal">
+              <MenuItem>JF Strategis 2020-2021</MenuItem>
+            </Link>
+            <Link to="/jpt-kritis">
+              <MenuItem>JPT Kritis</MenuItem>
+            </Link>
+            <Link to="/core-competence">
+              <MenuItem>Core Competence</MenuItem>
+            </Link>
           </MenuList>
         </Menu>
         <Heading fontSize={{ base: "xl", xl: "2xl" }}>
           <a href="/contact">Kontak</a>
         </Heading>
-        <Heading fontSize={{ base: "xl", xl: "2xl" }}>FAQ</Heading>
+        <Heading fontSize={{ base: "xl", xl: "2xl" }}>
+          <Link to="/FAQ">
+            FAQ
+          </Link>
+        </Heading>
       </Stack>
     </Flex>
   );

@@ -38,21 +38,6 @@ export default function JabatanKritikal() {
       accessor: "Nama Jabatan",
       disableFilters: true
     },
-    // {
-    //   Header: "",
-    //   accessor: "button",
-    //   Cell: ({ cell }) => {
-    //     return (
-    //       <Button
-    //       // as={Link}
-    //       // to={`/candidateselection/detail/${idJobVacancy}/${cell.row.original.id_job_application}`}
-    //       // variant="link"
-    //       >
-    //         Detail
-    //       </Button>
-    //     );
-    //   },
-    // },
   ];
 
   return (

@@ -5,12 +5,12 @@ import Papa from "papaparse";
 import LoadingSpinner from "../../../components/loadingspinner";
 import ColumnFilter from "../../../components/columnfilter";
 
-export default function LongList() {
+export default function CoreCompetence() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function getData() {
-      const response = await fetch("/files/Longlist_JF_dan_JA.csv");
+      const response = await fetch("/files/Core_Competence.csv");
       const reader = response.body.getReader();
       const result = await reader.read(); // raw array
       const decoder = new TextDecoder("utf-8");
@@ -19,7 +19,6 @@ export default function LongList() {
       const rows = results.data; // array of objects
       setData(rows);
       setLoading(false);
-      console.log(rows);
     }
     if (loading) {
       getData();
@@ -33,17 +32,22 @@ export default function LongList() {
       Cell: (props) => {
         return <div>{props.row.index + 1}</div>;
       },
-      disableFilters: true
+      disableFilters: true,
     },
     {
-      Header: "Jabatan Kritikal",
-      accessor: "Jabatan Kritikal",
-      disableFilters: true
-    },
-    {
-      Header: "Top Down",
-      accessor: "Top Down",
+      Header: "Bidang",
+      accessor: "Bidang",
       Filter: ColumnFilter,
+    },
+    {
+      Header: "Major Project",
+      accessor: "Major Project",
+      disableFilters: true,
+    },
+    {
+      Header: "Nama Jabatan/Bidang",
+      accessor: "Nama Jabatan/Bidang",
+      disableFilters: true,
     },
     {
       Header: "Jenis Jabatan",
@@ -51,14 +55,19 @@ export default function LongList() {
       Filter: ColumnFilter,
     },
     {
-      Header: "Nilai Tingkat Kritis",
-      accessor: "Nilai Tingkat Kritis",
-      disableFilters: true
+      Header: "Tugas",
+      accessor: "Tugas",
+      disableFilters: true,
     },
     {
-      Header: "Bottom Up",
-      accessor: "Bottom Up",
-      Filter: ColumnFilter,
+      Header: "Level Competency Permenpan 38 Tahun 2017",
+      accessor: "Level Competency Permenpan 38 Tahun 2017",
+      disableFilters: true,
+    },
+    {
+      Header: "Level Competency SKKNI",
+      accessor: "Level Competency SKKNI",
+      disableFilters: true,
     },
   ];
 
@@ -68,7 +77,7 @@ export default function LongList() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">Long List JF dan FA</Heading>
+          <Heading mb="4rem">Core Competence</Heading>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>
       )}
