@@ -1,24 +1,54 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import HttpApi from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
+
+i18n
+  .use(HttpApi)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    supportedLngs: ["en", "id"],
+    fallbackLng: "id",
+    debug: false,
+    //language detector
+    detection: {
+      order: ["cookie", "htmlTag"],
+      caches: ["cookie"],
+    },
+    backend: {
+      loadPath: "assets/locales/{{lng}}/translation.json",
+    },
+  });
+
+const loadingMarkup = (
+  <div className="py-4 text-center">
+    <h3>Loading..</h3>
+  </div>
+);
 
 const theme = extendTheme({
   colors: {
     yellowPrimary: "#FED900",
-    yellowSecondary: "#FFC000"
-  }
-})
+    yellowSecondary: "#FFC000",
+  },
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Suspense fallback={loadingMarkup}>
+    <React.StrictMode>
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
+    </React.StrictMode>
+  </Suspense>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

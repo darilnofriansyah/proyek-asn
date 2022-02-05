@@ -1,0 +1,38 @@
+{
+    "title": "Ragam Okupasi Kritikal ASN Indonesia Tahun 2021",
+    "title_definition": "Definisi",
+    "description_definition": "Website ini adalah sumber informasi tentang Ragam Okupasi Kritikal Aparatur Sipil Negara Indonesia. Ingin tahu lebih lanjut?",
+    "more": "Lihat lebih lanjut",
+    "title_methodology": "Metodologi",
+    "description_methodology": "Metodologi yang dilakukan di dalam pelaksanaan riset ini adalah melalui tiga tahapan besar, yakni Top-Down, Bottom Up, dan Dovetailing.",
+
+    "title_about":"Jabatan Kritikal",
+    "peraturan_about":"Peraturan Menteri PAN-RB Nomor 3 Tahun 2020:",
+    "description_about":"Jabatan kritikal merupakan jabatan inti dalam organisasi yang memenuhi karakteristik tertentu. Karakteristik jabatan kritikal terdiri dari:",
+    "poin1_about":"a. Strategis dan berkaitan langsung dengan prioritas nasional; dan",
+    "poin2_about":"b. Jabatan yang memerlukan keahlian yang sangat khusus dan/atau langka.",
+    
+    "title_about_red":"Tiga Kriteria Jabatan Kritikal",
+    "three_point_about": [
+        {
+            "title": "DEFISIT (SHORTAGE)",
+            "description": "Kesenjangan permintaan dan ketersediaan tenaga kerja dengan keterampilan tertentu"
+        },
+        {
+            "title": "STRATEGIC",
+            "description": "Keterampilan tertentu yang sesuai dengan tujuan pembangunan strategis negara"
+        },
+        {
+            "title": "HIGH-SKILLED",
+            "description": "Jabatan Kritikal mengidentifikasi pekerjaan dengan keterampilan tertentu"
+        }
+    ],
+
+
+    "header_about":"Tentang Kami",
+    "header_methodology":"Metodologi",
+    "header_col":"Okupasi Kritikal",
+    "header_contact":"Kontak",
+    "header_faq":"FAQ",
+    "footer": "COL ASN Indonesia merupakan hasil kolaborasi antara:"
+}

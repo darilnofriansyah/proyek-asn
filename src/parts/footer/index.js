@@ -9,14 +9,17 @@ import logo_lanri from "../../assets/images/logo/logo_lanri.png";
 import logo_kasn from "../../assets/images/logo/logo_kasn.png";
 import logo_bappenas from "../../assets/images/logo/logo_bappenas.png";
 import logo_csgar from "../../assets/images/logo/logo_csgar.png";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <Flex bgColor="gray.200" direction="column">
       <Stack m="0">
         <Flex justifyContent="center" p="2rem" bgColor="red.700" color="white">
           <Heading textAlign="center" size="md">
-            COL ASN Indonesia merupakan hasil kolaborasi antara:
+            {t('footer')}
           </Heading>
         </Flex>
         <Flex justifyContent="center" alignItems="center" direction={{ base: "column", xl: "row" }}>
