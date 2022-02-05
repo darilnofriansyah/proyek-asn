@@ -9,12 +9,15 @@ import {
   Image,
 } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import employee from "../../assets/images/home/employee.jpg";
 import worker from "../../assets/images/home/hero.jpg";
 import methodology from "../../assets/images/home/methodology.jpg";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <Flex bgColor="gray.100" direction="column" spacing={5}>
       {/* Hero Section */}
@@ -32,7 +35,7 @@ export default function Home() {
           bgColor="rgba(255, 255, 255, 0.6)"
         >
           <Heading fontSize={{ base: "3xl", lg: "5xl", xl: "7xl" }}>
-            Ragam Okupasi Kritikal ASN Indonesia Tahun 2021
+            {t("title")}
           </Heading>
         </Flex>
       </SimpleGrid>
@@ -52,10 +55,11 @@ export default function Home() {
           bgColor={{ base: "rgba(255, 255, 255, 0.6)", xl: "none" }}
         >
           <Stack>
-            <Heading fontSize={{ base: "3xl", xl: "5xl" }}>Definisi</Heading>
+            <Heading fontSize={{ base: "3xl", xl: "5xl" }}>
+              {t("title_definition")}
+            </Heading>
             <Text lineHeight="2" fontSize={{ base: "lg", xl: "2xl" }}>
-              Website ini adalah sumber informasi tentang Ragam Okupasi Kritikal
-              Aparatur Sipil Negara Indonesia. Ingin tahu lebih lanjut?
+              {t("description_definition")}
             </Text>
             <Link to="/about">
               <Text
@@ -63,7 +67,7 @@ export default function Home() {
                 fontWeight="500"
                 fontSize={{ base: "lg", xl: "2xl" }}
               >
-                Lihat lebih lanjut
+                {t("more")}
               </Text>
             </Link>
           </Stack>
@@ -83,12 +87,10 @@ export default function Home() {
           <Flex p={{ base: 3, md: 10 }} direction="column">
             <Stack>
               <Heading fontSize={{ base: "3xl", xl: "5xl" }}>
-                Metodologi
+                {t("title_methodology")}
               </Heading>
               <Text lineHeight="2" fontSize={{ base: "lg", xl: "2xl" }}>
-                Metodologi yang dilakukan di dalam pelaksanaan riset ini adalah
-                melalui tiga tahapan besar, yakni Top-Down, Bottom Up, dan
-                Dovetailing.
+                {t("description_methodology")}
               </Text>
               <Link to="/about">
                 <Text
@@ -96,7 +98,7 @@ export default function Home() {
                   fontWeight="500"
                   fontSize={{ base: "lg", xl: "2xl" }}
                 >
-                  Lihat lebih lanjut
+                  {t("more")}
                 </Text>
               </Link>
             </Stack>

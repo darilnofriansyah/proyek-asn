@@ -1,0 +1,37 @@
+{
+    "title": "Variety of Critical Occupations for Indonesian ASN in 2021",
+    "title_definition": "Definition",
+    "description_definition": "This website is a source of information about the Critical Occupational Variety of Indonesian Civil Apparatus. Want to know more?",
+    "more": "See more",
+    "title_methodology": "Methodology",
+    "description_methodology": "The methodology used in the implementation of this research is through three major stages, namely Top-Down, Bottom-Up, and Dovetailing.",
+
+    "title_about":"Critical Position",
+    "peraturan_about":"PAN-RB Ministerial Regulation Number 3 of 2020:",
+    "description_about":"Critical positions are core positions in an organization that meet certain characteristics. The characteristics of critical positions consist of:",
+    "poin1_about":"a. Strategic and directly related to national priorities; and",
+    "poin2_about":"b. Positions that require highly specialized and/or rare skills.",
+
+    "title_about_red":"Three Critical Position Criteria",
+    "three_point_about": [
+        {
+            "title": "SHORTAGE",
+            "description": "Gap in demand and availability of labor with certain skills"
+        },
+        {
+            "title": "STRATEGIC",
+            "description": "Specific skills that are in line with the country's strategic development goals"
+        },
+        {
+            "title": "HIGH-SKILLED",
+            "description": "Critical Jobs identify jobs with specific skills"
+        }
+    ],
+
+    "header_about":"About Us",
+    "header_methodology":"Methodology",
+    "header_col":"Critical Ocupation",
+    "header_contact":"Contact",
+    "header_faq":"FAQ",
+    "footer": "COL ASN Indonesia is the result of collaboration between:"
+}
