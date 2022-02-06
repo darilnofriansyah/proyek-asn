@@ -51,26 +51,9 @@ export default function Header() {
         justifyContent="center"
         alignItems="center"
       >
-        <Menu closeOnBlur="true">
-          <MenuButton>
-            <Stack
-              justifyContent="center"
-              alignItems="center"
-              spacing={1}
-              direction="row"
-            >
-              <Heading fontSize={{ base: "xl", xl: "2xl" }}>
-                {t("header_about")}
-              </Heading>
-              <ChevronDownIcon />
-            </Stack>
-          </MenuButton>
-          <MenuList>
-            <a href="/about">
-              <MenuItem>Tentang Ragam Okupasi Kritikal ASN</MenuItem>
-            </a>
-          </MenuList>
-        </Menu>
+        <Heading fontSize={{ base: "xl", xl: "2xl" }}>
+          <a href="/about">{t("header_about")}</a>
+        </Heading>
         <Menu closeOnBlur="true">
           <MenuButton>
             <Stack
@@ -87,7 +70,7 @@ export default function Header() {
           </MenuButton>
           <MenuList>
             <a href="/metodologi/overview">
-              <MenuItem>Overview</MenuItem>
+              <MenuItem>Ikhtisar</MenuItem>
             </a>
             <a href="/metodologi/topdown">
               <MenuItem>Top Down</MenuItem>
@@ -116,7 +99,7 @@ export default function Header() {
           </MenuButton>
           <MenuList>
             <Link to="/longlist">
-              <MenuItem>Long List JF dan JA</MenuItem>
+              <MenuItem>Daftar JF dan JA</MenuItem>
             </Link>
             <Link to="/jabatankritikal">
               <MenuItem>Daftar Jabatan Kritikal</MenuItem>
@@ -125,16 +108,16 @@ export default function Header() {
               <MenuItem>Tugas Fungsi dan Nomor PermenPAN</MenuItem>
             </Link>
             <Link to="/jabatankritikal">
-              <MenuItem>Future Jobs</MenuItem>
+              <MenuItem>Proyeksi Pekerjaan Masa Datang</MenuItem>
             </Link>
             <Link to="/jabatankritikal">
               <MenuItem>JF Strategis 2020-2021</MenuItem>
             </Link>
             <Link to="/jpt-kritis">
-              <MenuItem>JPT Kritis</MenuItem>
+              <MenuItem>JPT Kritikal</MenuItem>
             </Link>
             <Link to="/core-competence">
-              <MenuItem>Core Competence</MenuItem>
+              <MenuItem>Kompetensi Utama</MenuItem>
             </Link>
           </MenuList>
         </Menu>

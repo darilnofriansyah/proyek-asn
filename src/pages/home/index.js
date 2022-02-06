@@ -11,9 +11,10 @@ import {
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import notebook from "../../assets/images/home/notebook.jpg";
+import hero from "../../assets/images/home/hero.jpg";
+import workplace from "../../assets/images/home/workplace.jpg";
 import employee from "../../assets/images/home/employee.jpg";
-import worker from "../../assets/images/home/hero.jpg";
-import methodology from "../../assets/images/home/methodology.jpg";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -25,7 +26,7 @@ export default function Home() {
         py="15rem"
         px={{ base: "4rem", lg: "8rem", xl: "10rem" }}
         bgSize="cover"
-        bgImage={worker}
+        bgImage={hero}
         columns={2}
       >
         <Flex
@@ -45,7 +46,7 @@ export default function Home() {
         px={{ base: "4rem", lg: "8rem", xl: "10rem" }}
         columns={2}
         bgSize="cover"
-        bgImage={employee}
+        bgImage={notebook}
         bgPos="right"
       >
         <Flex
@@ -78,7 +79,7 @@ export default function Home() {
         py="10rem"
         px={{ base: "4rem", lg: "8rem", xl: "10rem" }}
         bgSize="cover"
-        bgImage={methodology}
+        bgImage={workplace}
         bgPos="left"
         templateColumns="repeat(2, 1fr)"
       >
@@ -105,6 +106,39 @@ export default function Home() {
           </Flex>
         </GridItem>
       </Grid>
+      <SimpleGrid
+        py="10rem"
+        px={{ base: "4rem", lg: "8rem", xl: "10rem" }}
+        columns={2}
+        bgSize="cover"
+        bgImage={employee}
+        bgPos="right"
+      >
+        <Flex
+          py={10}
+          direction="column"
+          px={10}
+          bgColor={{ base: "rgba(255, 255, 255, 0.6)", xl: "none" }}
+        >
+          <Stack>
+            <Heading fontSize={{ base: "3xl", xl: "5xl" }}>
+              {t("title_benefit")}
+            </Heading>
+            <Text lineHeight="2" fontSize={{ base: "lg", xl: "2xl" }}>
+              {t("description_benefit")}
+            </Text>
+            {/* <Link to="/about">
+              <Text
+                as="u"
+                fontWeight="500"
+                fontSize={{ base: "lg", xl: "2xl" }}
+              >
+                {t("more")}
+              </Text>
+            </Link> */}
+          </Stack>
+        </Flex>
+      </SimpleGrid>
     </Flex>
   );
 }
