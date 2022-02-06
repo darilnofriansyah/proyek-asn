@@ -5,10 +5,15 @@
     "more": "Lihat lebih lanjut",
     "title_methodology": "Metodologi",
     "description_methodology": "Metodologi yang dilakukan di dalam pelaksanaan riset ini adalah melalui tiga tahapan besar, yakni Top-Down, Bottom Up, dan Dovetailing.",
+    "title_benefit": "Manfaat",
+    "description_benefit": "Kajian ini sangat krusial sebagai langkah awal pengembangan basis data pengambilan kebijakan strategis pengembangan SDM ASN nasional. Luaran kajian ini diharapkan dapat menjadi living document yang dapat dikembangkan dan diaktualisasi secara berkala.",
 
-    "title_about":"Jabatan Kritikal",
+    "title_about":"Tentang",
+    "subtitle1_about":"Ragam Okupasi Kritikal",
+    "description1_about":"Ragam Okupasi Kritikal atau Critical Occupation List merupakan sebuah living database yang merangkum hasil identifikasi sejumlah keahlian kritikal maupun posisi pekerjaan yang diperlukan oleh sebuah organisasi dalam menjawab kebutuhan zaman. Ragam Okupasi Kritikal didesain untuk membantu para pejabat terkait memastikan keselarasan kebijakan pengembangan sumber daya manusia di dalam suatu organisasi dengan kebutuhan aktual yang sangat dibutuhkan para atasan atau pemberi kerja dalam memenuhi tujuan organisasi (World Bank Group, 2019). Bagi pemerintah, Ragam Okupasi Kritikal memberikan gambaran aktual peta kebutuhan sumber daya manusia ASN untuk mengurangi kesenjangan keterampilan yang dibutuhkan dalam memenuhi capaian target nasional.",
+    "subtitle2_about":"Ragam Okupasi Kritikal ASN Indonesia",
     "peraturan_about":"Peraturan Menteri PAN-RB Nomor 3 Tahun 2020:",
-    "description_about":"Jabatan kritikal merupakan jabatan inti dalam organisasi yang memenuhi karakteristik tertentu. Karakteristik jabatan kritikal terdiri dari:",
+    "description2_about":"Jabatan kritikal merupakan jabatan inti dalam organisasi yang memenuhi karakteristik tertentu. Karakteristik jabatan kritikal terdiri dari:",
     "poin1_about":"a. Strategis dan berkaitan langsung dengan prioritas nasional; dan",
     "poin2_about":"b. Jabatan yang memerlukan keahlian yang sangat khusus dan/atau langka.",
     
@@ -28,11 +33,83 @@
         }
     ],
 
+    
+    "title_overview":"Ikhtisar",
+    "description_overview":"Daftar Jabatan Kritikal ASN di Indonesia dikembangkan berdasarkan sejumlah indikator dan data yang terkumpul melalui dua pendekatan: Top Down dan Bottom Up. Analisis yang dihasilkan oleh masing-masing pendekatan selanjutnya akan diperiksa kembali dalam proses Dovetailing yang dilakukan dalam dua tahapan berturut-turut sebagai basis dalam menghasilkan Daftar Jabatan Kritikal akhir.",
+    "diagram_overview":"Metode Pemetaan Jabatan Kritikal ASN",
+    "title_topdown":"Pendekatan Top Down",
+    "description_topdown":"Pendekatan top down merupakan tahapan yang bertujuan menggunakan data sekunder yang tersedia untuk dapat menggambarkan ragam okupasi kritikal. Pendekatan ini memberikan dasar untuk menentukan apakah suatu pekerjaan mengalami tingkat Kritis dari segi defisit, keahlian, dan strategis. Pendekatan top down mengacu pada berbagai sumber data kuantitatif seperti  e-formasi, sijapti, SSCASN BKN, serta Data Uji kompetensi dari K/L.",
+    "diagram_topdown":"Indikator Pendekatan Top Down",
+    "indikator_topdown": [
+        {
+            "title": "Defisit",
+            "content": [
+                "Rasio formasi CPNS (JA & JF) dan jumlah pendaftar yang diterima / lulus wawancara",
+                "Jumlah jabatan JF kosong pada durasi waktu tertentu (2018, 2019, 2020)",
+                "Seleksi terbuka JPT berulang"
+            ]
+        },
+        {
+            "title": "Keahlian",
+            "content": [
+                "Rasio jumlah PNS yang mengikuti uji kompetensi untuk menjadi JF dengan jumlah PNS yang lulus",
+                "Penurunan jenjang pendidikan pada JF tertentu pada tiga tahun terakhir",
+                "Rasio peserta terdaftar pada seleksi terbuka JPT tetapi tidak lulus uji kompetensi (assessment center)"
+            ]
+        },
+        {
+            "title": "Strategis",
+            "content": [
+                "JF baru yang muncul dalam tiga tahun terakhir",
+                "Persandingan JF dengan jabatan pada peta okupasi nasional dan KBJI"
+            ]
+        }
+    ],
+    "title_bottomup":"Pendekatan Bottom Up",
+    "description1_bottomup":"Pendekatan bottom up berperan untuk melengkapi pendekatan top down yang bertujuan untuk menghasilkan bukti tambahan dan proses triangulasi pada analisis dovetailing. Tujuan pendekatan bottom up adalah membangun basis bukti langsung dari pemangku kepentingan dan membangun pengetahuan kontekstual tentang sektor pekerjaan agar penyusun dapat menafsirkan indikator, mengkomunikasikan keputusan dan pemantauan Ragam Okupasi Kritikal dengan lebih baik.",
+    "diagram_bottomup": [
+        "Melengkapi pendekatan top-down untuk menghasilkan bukti tambahan.",
+        "Memberikan informasi tekstual untuk hasil analisis yang lebih detail."
+    ],
+    "indikator_bottomup": [
+        {
+            "title":"Target",
+            "content": [
+                "Membangun basis bukti langsung dari pemangku kepentingan",
+                "Membangun pengetahuan kontekstual agar penyusun dapat menafsirkan indikator, mengkomunikasikan keputusan dan pemantauan Daftar Jabatan Kritikal"
+            ],
+            "note": "Sumber: Kementerian Sumber Manusia Malaysia. (2020). Critical Occupations List 2019/2020 Occupation Report Malaysia",
+            "gambar":"https://cdn.kibrispdr.org/data/gambar-gear-png-0.png"
+        },
+        {
+            "title":"Proses",
+            "content": [
+                "Call for Evidence (CFE)",
+                "Survey kepada employer (pemberi kerja) dan stakeholder terkait.",
+                "Stakeholder Consultations",
+                "Konsultasi secara mendalam (focus group discussion)"
+            ],
+            "note": "SAMPEL CFE = Pusat : 20 Kementerian dan 7 LPNK (91 Responden) | Daerah : 7 Daerah (200 Responden OPD)",
+            "gambar":"../../../assets/images/icon/target.png"
+        }
+    ],
+    "description2_bottomup": [
+        "Menyebarkan kuesioner kepada 7 provinsi terpilih yang meliputi: yaitu Papua Barat, Maluku Utara, Nusa Tenggara Timur, Sulawesi Selatan, Kalimantan Barat, Kepulauan Bangka Belitung, dan Jawa Timur untuk mendapatkan daftar jabatan kritikal dari setiap provinsi. Survei disebarkan kepada K/L, Pemerintah Daerah, dan Instansi terkait untuk menanyakan mengenai jabatan yang dibutuhkan untuk kemudian dikategorisasi sebagai jabatan kritikal berdasarkan tiga indikator yang telah ditentukan yaitu defisit, kompetensi, dan strategis.",
+        "Dalam satu kurun waktu yang sama dengan dilakukannya survei, dilakukan FGD kepada stakeholder (Pemerintah, Pakar/Profesional) terkait untuk mengklarifikasi hasil daftar jabatan kritikal dari survei",
+        "Hasil Daftar Jabatan Kritikal (DJK) hasil proses bottom up diuji dalam tahapan dovetailing"
+    ],
+    "title_dovetailing":"Dovetailing",
+    "description_dovetailing":"Pada tahap dovetailing, hasil pendekatan top-down dan bottom-up diintegrasikan untuk membuat justifikasi apakah sebuah okupasi harus dimasukkan dalam Daftar Ragam Okupasi Kritikal ASN final. Setelah mengintegrasikan bukti dari pendekatan top down dan bottom up, dilakukan proses validasi dengan melakukan diskusi dengan para pemangku kepentingan agar dapat memberikan masukan tentang daftar kekurangan yang diusulkan untuk memastikan bahwa pekerjaan termasuk yang memiliki sifat strategis.",
+    "diagram_dovetailing":"Kerangka Klasifikasi Jabatan dalam Proses Dovetailing",
+    "diagram_notes_dovetailing":"Keterangan: Warna merah berarti irisan okupasi yang bersifat kritikal pada proses dovetailing",
+    "notes1_dovetailing":"Kerangka dalam melakukan proses dovetailing mengacu pada beberapa sumber kajian Critical Occupation List di berbagai negara, salah satunya Malaysia.",
+    "notes2_dovetailing":"*Untuk JPT dianalisis dengan tahapan khusus mengingat karakteristik JPT yang berbeda yaitu, meskipun tidak memenuhi kriteria shortage, tetapi level jabatannya memenuhi kriteria strategis",
+
 
     "header_about":"Tentang Kami",
     "header_methodology":"Metodologi",
     "header_col":"Okupasi Kritikal",
     "header_contact":"Kontak",
     "header_faq":"FAQ",
-    "footer": "COL ASN Indonesia merupakan hasil kolaborasi antara:"
+    "footer": "Ragam Okupasi Kritikal ASN Indonesia merupakan hasil kolaborasi antara:"
 }

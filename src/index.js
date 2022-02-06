@@ -19,11 +19,11 @@ i18n
     debug: false,
     //language detector
     detection: {
-      order: ["cookie", "htmlTag"],
+      order: ["path", "cookie", "htmlTag"],
       caches: ["cookie"],
     },
     backend: {
-      loadPath: "assets/locales/{{lng}}/translation.json",
+      loadPath: "/assets/locales/{{lng}}/translation.json",
     },
   });
 

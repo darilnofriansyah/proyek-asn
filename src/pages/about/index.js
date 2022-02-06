@@ -20,15 +20,35 @@ export default function About() {
     <Flex pt="4rem" px="4rem" mb="3rem">
       <SimpleGrid spacing="5rem" columns={{ base: 1, md: 2 }}>
         <Flex direction="column">
+          <Heading px="4rem" fontSize="6xl" mb="2rem">
+            {t("title_about")}
+          </Heading>
           <Heading
             padding="1rem"
             px="4rem"
             borderRadius="50px"
             bgColor="yellowPrimary"
-            fontSize="6xl"
+            fontSize="4xl"
             mb="2rem"
           >
-            {t("title_about")}
+            {t("subtitle1_about")}
+          </Heading>
+          <Text
+            mb="3rem"
+            mx="4rem"
+            fontSize="2xl"
+          >
+            {t("description1_about")}
+          </Text>
+          <Heading
+            padding="1rem"
+            px="4rem"
+            borderRadius="50px"
+            bgColor="yellowPrimary"
+            fontSize="4xl"
+            mb="2rem"
+          >
+            {t("subtitle2_about")}
           </Heading>
           <Text
             mb="3rem"
@@ -42,7 +62,7 @@ export default function About() {
             </a>
           </Text>
           <Stack mb="3rem" px="4rem" spacing="2rem">
-            <Text fontSize="2xl">{t("description_about")}</Text>
+            <Text fontSize="2xl">{t("description2_about")}</Text>
             <Divider />
             <Text fontSize="2xl">{t("poin1_about")}</Text>
             <Divider />
@@ -51,47 +71,22 @@ export default function About() {
         </Flex>
         <Flex bgColor="red.600" p="3rem" direction="column">
           <Stack bgColor="red.500" spacing="2rem" p="3rem" mb="1rem">
-            <Heading color="white">{t('title_about_red')}</Heading>
+            <Heading color="white">{t("title_about_red")}</Heading>
             {/* Defisit */}
             <Stack>
               <Stack spacing="2rem" direction="column">
-                {t('three_point_about', { returnObjects: true }).map(({ title, description }) => (
-                  <Stack>
-                    <Heading color="yellowPrimary" fontSize="3xl">
-                      {title}
-                    </Heading>
-                    <Text color="white" fontSize="2xl">
-                      {description}
-                    </Text>
-                  </Stack>
-                ))}
-                {/* <Stack>
-                  <Heading color="yellowPrimary" fontSize="3xl">
-                    DEFISIT (SHORTAGE)
-                  </Heading>
-                  <Text color="white" fontSize="2xl">
-                    Kesenjangan permintaan dan ketersediaan tenaga kerja dengan
-                    keterampilan tertentu
-                  </Text>
-                </Stack>
-                <Stack>
-                  <Heading color="yellowPrimary" fontSize="3xl">
-                    HIGH-SKILLED
-                  </Heading>
-                  <Text color="white" fontSize="2xl">
-                    Jabatan Kritikal mengidentifikasi pekerjaan dengan
-                    keterampilan tertentu
-                  </Text>
-                </Stack>
-                <Stack>
-                  <Heading color="yellowPrimary" fontSize="3xl">
-                    STRATEGIC
-                  </Heading>
-                  <Text color="white" fontSize="2xl">
-                    Keterampilan tertentu yang sesuai dengan tujuan pembangunan
-                    strategis negara
-                  </Text>
-                </Stack> */}
+                {t("three_point_about", { returnObjects: true }).map(
+                  ({ title, description }) => (
+                    <Stack>
+                      <Heading color="yellowPrimary" fontSize="3xl">
+                        {title}
+                      </Heading>
+                      <Text color="white" fontSize="2xl">
+                        {description}
+                      </Text>
+                    </Stack>
+                  )
+                )}
               </Stack>
             </Stack>
           </Stack>
