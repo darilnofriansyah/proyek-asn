@@ -11,16 +11,19 @@ import facebook from "../../assets/images/logo/facebook.svg";
 import twitter from "../../assets/images/logo/twitter.png";
 import instagram from "../../assets/images/logo/instagram.png";
 import youtube from "../../assets/images/logo/YouTube.png";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  const {t} = useTranslation();
+
   return (
     <Flex alignItem="center" justifyContent="center" py="4rem" px="4rem">
       <SimpleGrid spacing="5rem" columns={{ base: 1, md: 2 }}>
         <Flex direction="column">
           <Heading mb="2rem" fontSize="5xl">
-            Contact Us
+            {t("title_contactus")}
           </Heading>
-          <Text fontSize="2xl">Deputi SDM Aparatur</Text>
+          <Text fontSize="2xl" as="b">Deputi SDM Aparatur</Text>
           <Text fontSize="2xl">
             Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi
           </Text>

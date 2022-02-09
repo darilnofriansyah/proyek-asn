@@ -102,9 +102,40 @@
     "description_dovetailing":"Pada tahap dovetailing, hasil pendekatan top-down dan bottom-up diintegrasikan untuk membuat justifikasi apakah sebuah okupasi harus dimasukkan dalam Daftar Ragam Okupasi Kritikal ASN final. Setelah mengintegrasikan bukti dari pendekatan top down dan bottom up, dilakukan proses validasi dengan melakukan diskusi dengan para pemangku kepentingan agar dapat memberikan masukan tentang daftar kekurangan yang diusulkan untuk memastikan bahwa pekerjaan termasuk yang memiliki sifat strategis.",
     "diagram_dovetailing":"Kerangka Klasifikasi Jabatan dalam Proses Dovetailing",
     "diagram_notes_dovetailing":"Keterangan: Warna merah berarti irisan okupasi yang bersifat kritikal pada proses dovetailing",
-    "notes1_dovetailing":"Kerangka dalam melakukan proses dovetailing mengacu pada beberapa sumber kajian Critical Occupation List di berbagai negara, salah satunya Malaysia.",
-    "notes2_dovetailing":"*Untuk JPT dianalisis dengan tahapan khusus mengingat karakteristik JPT yang berbeda yaitu, meskipun tidak memenuhi kriteria shortage, tetapi level jabatannya memenuhi kriteria strategis",
-
+    "notes1_dovetailing":"Kerangka dalam melakukan proses dovetailing mengacu pada beberapa sumber kajian Critical Occupation List di berbagai negara, salah satunya Malaysia. Untuk JPT dianalisis dengan tahapan khusus mengingat karakteristik JPT yang berbeda yaitu, meskipun tidak memenuhi kriteria shortage, tetapi level jabatannya memenuhi kriteria strategis",
+    "title_contactus":"Hubungi Kami",
+    "pertanyaan1_faq":"Apa itu Okupasi Kritikal?",
+    "pertanyaan2_faq":"Apa itu Ragam Okupasi Kritikal ASN Indonesia?",
+    "pertanyaan3_faq":"Apa manfaat Ragam Okupasi Kritikal ASN Indonesia?",
+    "pertanyaan4_faq":"Apa saja indikator yang dipakai dalam mengukur Ragam Okupasi Kritikal ASN Indonesia?",
+    "pertanyaan5_faq":"Siapa yang merilis daftar Ragam Okupasi Kritikal ASN Indonesia?",
+    "pertanyaan6_faq":"Darimana data kajian Ragam Okupasi Kritikal ASN Indonesia ini didapat?",
+    "pertanyaan7_faq":"Bagaimana Cara Merancang Ragam Okupasi Kritikal ASN Indonesia?",
+    "jawaban1_faq":"Ragam Okupasi Kritikal atau yang dikenal dengan istilah Critical Occupation List merupakan sebuah living database yang merangkum hasil identifikasi atau pemetaan sejumlah keahlian kritikal maupun posisi pekerjaan yang diperlukan oleh sebuah organisasi dalam menjawab kebutuhan zaman. Bagi pemerintah, Ragam Okupasi Kritikal memberikan gambaran aktual peta kebutuhan sumber daya manusia ASN untuk mengurangi kesenjangan keterampilan yang dibutuhkan dalam memenuhi capaian target nasional.",
+    "jawaban2_faq":"Ragam Okupasi Kritikal ASN Indonesia merupakan daftar yang berisi nama-nama jabatan yang masuk ke dalam kategori kritikal karena memenuhi kriteria sebagaimana disebutkan dalam Permenpan tentang Manajemen Talenta (jabatan bersifat strategis dan berkaitan langsung dengan prioritas nasional, dan jabatan yang memerlukan keahlian yang bersifat sangat khusus dan langka). Daftar jabatan yang masuk ke dalam ragam okupasi diharapkan mampu mendorong percepatan pembangunan nasional sesuai dengan major project yang menjadi prioritas presiden.",
+    "jawaban3_faq":[
+        "Ragam Okupasi Kritikal ASN Indonesia sangat krusial sebagai langkah awal dalam mengembangkan basis data pengambilan kebijakan strategis pengembangan SDM ASN nasional.",
+        "Sebagai proyeksi pemetaan kebutuhan SDM nasional dalam rangka mencapai tujuan pembangunan nasional.",
+        "Sebagai basis dokumen bagi setiap instansi dalam melakukan perencanaan kebutuhan ASN, maupun mengembangkan kompetensi ASN yang sudah ada."
+    ],
+    "jawaban4_faq":{
+        "title":"Indikator dalam menyusun Ragam Okupasi Kritikal ASN Indonesia terbagi atas tiga indikator utama, yaitu:",
+        "content":[
+            "Defisit (Shortage), yaitu kesenjangan permintaan dan ketersediaan tenaga kerja dengan keterampilan tertentu",
+            "Keahlian (Skilled), yaitu Jabatan Kritikal mengidentifikasi pekerjaan dengan keterampilan tertentu",
+            "Strategis (Strategic), Keterampilan tertentu yang sesuai dengan tujuan pembangunan strategis negara"
+        ]
+    },
+    "jawaban5_faq":"Pemetaan Ragam Okupasi Kritikal merupakan hasil kerjasama antara Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi dengan beberapa instansi yang terkait dengan pembuatan kebijakan aparatur sipil negara yakni Badan Kepegawaian Negara, Lembaga Administrasi Negara, dan Kementerian Perencanaan Pembangunan Nasional/Badan Perencanaan Pembangunan Nasional.",
+    "jawaban6_faq":"Data yang digunakan dalam melakukan pemetaan Ragam Okupasi Kritikal berasal dari data yang diperoleh secara top down (ditarik dari sistem yang sudah ada di lingkungan instansi pembina) maupun secara bottom up (melalui survey di tingkat pusat dan daerah) untuk melihat gambaran kebutuhan ASN saat ini.",
+    "jawaban7_faq":{
+        "title":"Penyusunan Ragam Okupasi Kritikal dikaji melalui tiga pendekatan, yaitu top-down, bottom-up dan proses dovetailing.",
+        "content":[
+            "Pendekatan top down: Pendekatan top down merupakan tahapan penelitian yang bertujuan menggunakan data sekunder yang tersedia untuk dapat menggambarkan daftar jabatan kritikal. Data sekunder yang digunakan dalam pendekatan ini meliputi: data formasi CPNS, Data e-Formasi, Data Instansi Pembina Jabatan Fungsional, Data JPT dari KASN, Data Peta Okupasi Nasional, Data Klasifikasi Baku Jabatan Indonesia, dan sejumlah Peraturan terkait.",
+            "Pendekatan Bottom Up: Pendekatan bottom up berperan untuk melengkapi pendekatan top down yang bertujuan untuk menghasilkan bukti tambahan dan proses triangulasi pada analisis dovetailing. Pendekatan ini membangun basis bukti langsung dari pemangku kepentingan dan membangun pengetahuan kontekstual tentang sektor pekerjaan agar penyusun dapat menafsirkan indikator, mengkomunikasikan keputusan dan pemantauan DPK dengan lebih baik. Pendekatan ini dilakukan dengan dua cara yaitu pertama, survei Call for Evidence (CfE) yang dilakukan untuk mengumpulkan informasi melalui survei kepada pemangku kepentingan terkait baik di tingkat pusat maupun daerah. Kedua, stakeholder consultation yaitu kegiatan konsultasi secara lebih mendalam dengan pemangku kepentingan melalui Focus Group Discussion (FGD).",
+            "Dovetailing: Pada tahap dovetailing, terdapat proses dovetailing dan validasi untuk menentukan ragam okupasi kritikal yang tepat. Pada tahap dovetailing, bukti dari pendekatan top-down dan bottom-up diintegrasikan untuk membuat kesimpulan tentang justifikasi apakah pekerjaan tersebut harus dimasukkan dalam daftar Ragam Okupasi Kritikal final. Pekerjaan yang memiliki kategori 'kekurangan' dan 'strategis' diidentifikasi melalui beberapa langkah pelengkap. Kemudian, setelah mengintegrasikan bukti dari pendekatan top down dan bottom up, dilakukan proses validasi dengan melakukan diskusi dengan para pemangku kepentingan agar dapat memberikan masukan tentang daftar kekurangan yang diusulkan untuk memastikan bahwa pekerjaan termasuk yang memiliki kepentingan strategis."
+        ]
+    },
 
     "header_about":"Tentang Kami",
     "header_methodology":"Metodologi",

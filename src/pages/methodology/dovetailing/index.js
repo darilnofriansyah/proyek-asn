@@ -24,13 +24,10 @@ export default function Dovetailing() {
         <Text mb="4rem" fontSize="xl">
           {t("diagram_notes_dovetailing")}
         </Text>
-        <Text mb="4rem" fontSize="2xl">
+      </Flex>
+      <Text mb="4rem" fontSize="2xl">
           {t("notes1_dovetailing")}
         </Text>
-        <Text mb="4rem" fontSize="xl">
-          {t("notes2_dovetailing")}
-        </Text>
-      </Flex>
     </Flex>
   );
 }

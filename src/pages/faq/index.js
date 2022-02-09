@@ -1,4 +1,11 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  List,
+  ListIcon,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 import {
   Accordion,
@@ -8,8 +15,12 @@ import {
   AccordionIcon,
   Box,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 export default function FAQ() {
+  const { t } = useTranslation();
+
   return (
     <Flex direction="column" py="4rem" px="8rem">
       <Heading mb="2rem">FAQ</Heading>
@@ -17,15 +28,12 @@ export default function FAQ() {
         <AccordionItem>
           <AccordionButton>
             <Box flex="1" textAlign="left">
-              <Heading fontSize="2xl">Apa itu COL?</Heading>
+              <Heading fontSize="2xl">{t("pertanyaan1_faq")}</Heading>
             </Box>
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4} fontSize="xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            {t("jawaban1_faq")}
           </AccordionPanel>
         </AccordionItem>
 
@@ -33,16 +41,13 @@ export default function FAQ() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                <Heading fontSize="2xl">Apa itu COL ASN Indonesia?</Heading>
+                <Heading fontSize="2xl">{t("pertanyaan2_faq")}</Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} fontSize="xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            {t("jawaban2_faq")}
           </AccordionPanel>
         </AccordionItem>
 
@@ -50,16 +55,20 @@ export default function FAQ() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                <Heading fontSize="2xl">Apa manfaat COL?</Heading>
+                <Heading fontSize="2xl">{t("pertanyaan3_faq")}</Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} fontSize="xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <List spacing={3}>
+              {t("jawaban3_faq", { returnObjects: true }).map((list) => (
+                <ListItem fontSize="xl">
+                  <ListIcon as={ChevronRightIcon} />
+                  {list}
+                </ListItem>
+              ))}
+            </List>
           </AccordionPanel>
         </AccordionItem>
 
@@ -67,18 +76,25 @@ export default function FAQ() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                <Heading fontSize="2xl">
-                  Apa saja indikator yang dipakai dalam mengukur COL?
-                </Heading>
+                <Heading fontSize="2xl">{t("pertanyaan4_faq")}</Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} fontSize="xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <Text mb="2rem">
+              {t("jawaban4_faq", { returnObjects: true }).title}
+            </Text>
+            <List spacing={3}>
+              {t("jawaban4_faq", { returnObjects: true }).content.map(
+                (list) => (
+                  <ListItem fontSize="xl">
+                    <ListIcon as={ChevronRightIcon} />
+                    {list}
+                  </ListItem>
+                )
+              )}
+            </List>
           </AccordionPanel>
         </AccordionItem>
 
@@ -86,16 +102,13 @@ export default function FAQ() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                <Heading fontSize="2xl">
-                  Siapa yang merilis daftar COL ASN Indonesia?
-                </Heading>
+                <Heading fontSize="2xl">{t("pertanyaan5_faq")}</Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} fontSize="xl">
-            Daftar COL ASN Indonesia dirilis oleh Kementerian Pendayagunaan
-            Aparatur Sipil Negara dan Reformasi Birokrasi Republik Indonesia
+            {t("jawaban5_faq")}
           </AccordionPanel>
         </AccordionItem>
 
@@ -103,16 +116,38 @@ export default function FAQ() {
           <h2>
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                <Heading fontSize="2xl">
-                  Bagaimana Cara Merancang COL ASN Indonesia?
-                </Heading>
+                <Heading fontSize="2xl">{t("pertanyaan6_faq")}</Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4} fontSize="xl">
-            Cara merancang COL ASN dilakukan melalui tiga tahap, yakni tahap
-            top-down, bottom-up, dan juga dovetailing
+            {t("jawaban6_faq")}
+          </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem>
+          <h2>
+            <AccordionButton>
+              <Box flex="1" textAlign="left">
+                <Heading fontSize="2xl">{t("pertanyaan7_faq")}</Heading>
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4} fontSize="xl">
+            <Text mb="2rem">
+              {t("jawaban7_faq", { returnObjects: true }).title}
+            </Text>
+            <List spacing={3}>
+              {t("jawaban7_faq", { returnObjects: true }).content.map(
+                (list) => (
+                  <ListItem fontSize="xl">
+                    {list}
+                  </ListItem>
+                )
+              )}
+            </List>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
