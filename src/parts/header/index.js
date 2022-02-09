@@ -98,12 +98,12 @@ export default function Header() {
             </Stack>
           </MenuButton>
           <MenuList>
-            <Link to="/longlist">
+            {/* <Link to="/longlist">
               <MenuItem>Daftar JF dan JA</MenuItem>
-            </Link>
-            <Link to="/jabatankritikal">
+            </Link> */}
+            {/* <Link to="/jabatankritikal">
               <MenuItem>Daftar Jabatan Kritikal</MenuItem>
-            </Link>
+            </Link> */}
             <Link to="/jabatankritikal">
               <MenuItem>Tugas Fungsi dan Nomor PermenPAN</MenuItem>
             </Link>
