@@ -98,26 +98,29 @@ export default function Header() {
             </Stack>
           </MenuButton>
           <MenuList>
-            {/* <Link to="/longlist">
-              <MenuItem>Daftar JF dan JA</MenuItem>
-            </Link> */}
-            {/* <Link to="/jabatankritikal">
+            <Link to="/daftar-jabatan-kritikal">
               <MenuItem>Daftar Jabatan Kritikal</MenuItem>
-            </Link> */}
-            <Link to="/jabatankritikal">
-              <MenuItem>Tugas Fungsi dan Nomor PermenPAN</MenuItem>
             </Link>
-            <Link to="/jabatankritikal">
-              <MenuItem>Proyeksi Pekerjaan Masa Datang</MenuItem>
+            <Link to="/rekomendasi-ja-jf">
+              <MenuItem>Rekomendasi JA ke JF</MenuItem>
             </Link>
-            <Link to="/jabatankritikal">
+            <Link to="/proyeksi-masa-datang">
+              <MenuItem>Proyeksi Masa Datang</MenuItem>
+            </Link>
+            <Link to="/jf-strategis">
               <MenuItem>JF Strategis 2020-2021</MenuItem>
             </Link>
-            <Link to="/jpt-kritis">
+            <Link to="/jpt-kritikal">
               <MenuItem>JPT Kritikal</MenuItem>
             </Link>
+            <Link to="/jpt-kritikal">
+              <MenuItem>Kompetensi Utama JPT Kritikal</MenuItem>
+            </Link>
+            <Link to="/jpt-kritis">
+              <MenuItem>Kompetensi Utama JF Kritikal</MenuItem>
+            </Link>
             <Link to="/core-competence">
-              <MenuItem>Kompetensi Utama</MenuItem>
+              <MenuItem>Kompetensi Utama JF Proyektif</MenuItem>
             </Link>
           </MenuList>
         </Menu>

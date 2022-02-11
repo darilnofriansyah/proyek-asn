@@ -1,16 +1,16 @@
-import { Button, Flex, Heading, Link } from "@chakra-ui/react";
+import { Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import CustomTable from "../../../components/table";
 import Papa from "papaparse";
 import LoadingSpinner from "../../../components/loadingspinner";
 import ColumnFilter from "../../../components/columnfilter";
 
-export default function LongList() {
+export default function JFStrategis() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function getData() {
-      const response = await fetch("/files/Daftar_Jabatan_Kritikal.csv");
+      const response = await fetch("/files/JF_Strategis.csv");
       const reader = response.body.getReader();
       const result = await reader.read(); // raw array
       const decoder = new TextDecoder("utf-8");
@@ -36,36 +36,19 @@ export default function LongList() {
       disableFilters: true,
     },
     {
-      Header: "Jabatan",
-      accessor: "Nama Jabatan Fungsional",
-      disableFilters: true,
-    },
-    {
-      Header: "Jenis",
-      accessor: "Jenis",
+      Header: "Bidang",
+      accessor: "Bidang",
       Filter: ColumnFilter,
     },
     {
-      Header: "Tugas",
-      accessor: "Tugas",
-      disableFilters: true,
+      Header: "Kelompok Jabatan",
+      accessor: "Kelompok jabatan",
+      Filter: ColumnFilter,
     },
     {
-      Header: "Permenpan",
-      accessor: "Permenpan",
+      Header: "Nama Jabatan",
+      accessor: "Nama Jabatan",
       disableFilters: true,
-    },
-    {
-      Header: "",
-      accessor: "Link_JDIH",
-      disableFilters: true,
-      Cell: ({ cell }) => (
-        <a href={`${cell.row.values.Link_JDIH}`}>
-          <Button variant="link">
-            Detail
-          </Button>
-        </a>
-      ),
     },
   ];
 
@@ -75,7 +58,15 @@ export default function LongList() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">Daftar Jabatan Kritikal</Heading>
+          <Heading mb="4rem">JF Strategis 2020-2021</Heading>
+          <Text fontSize="xl" mb="2rem">
+            JF Strategis 2020-2021 merupakan nama-nama jabatan fungsional yang
+            sesuai dengan kebutuhan Proyek Prioritas Strategis Nasional. Usulan
+            daftar jabatan ini berasal dari focus group discussion dengan para
+            K/L pelaksana program prioritas strategis, analisis data peta
+            okupasi nasional dan KBJI serta dari kajian literatur terhadap
+            increasing demand dari studi World Economic Forum (2020).
+          </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>
       )}

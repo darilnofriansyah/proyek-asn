@@ -1,16 +1,16 @@
-import { Button, Flex, Heading, Link } from "@chakra-ui/react";
+import { Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import CustomTable from "../../../components/table";
 import Papa from "papaparse";
 import LoadingSpinner from "../../../components/loadingspinner";
 import ColumnFilter from "../../../components/columnfilter";
 
-export default function LongList() {
+export default function Rekomendasi() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function getData() {
-      const response = await fetch("/files/Daftar_Jabatan_Kritikal.csv");
+      const response = await fetch("/files/Rekomendasi_JA_JF.csv");
       const reader = response.body.getReader();
       const result = await reader.read(); // raw array
       const decoder = new TextDecoder("utf-8");
@@ -36,14 +36,9 @@ export default function LongList() {
       disableFilters: true,
     },
     {
-      Header: "Jabatan",
-      accessor: "Nama Jabatan Fungsional",
+      Header: "Nama JA",
+      accessor: "Nama JA",
       disableFilters: true,
-    },
-    {
-      Header: "Jenis",
-      accessor: "Jenis",
-      Filter: ColumnFilter,
     },
     {
       Header: "Tugas",
@@ -51,21 +46,14 @@ export default function LongList() {
       disableFilters: true,
     },
     {
-      Header: "Permenpan",
-      accessor: "Permenpan",
+      Header: "Rekomendasi JF",
+      accessor: "Rekomendasi JF",
       disableFilters: true,
     },
     {
-      Header: "",
-      accessor: "Link_JDIH",
+      Header: "Hasil Analisis",
+      accessor: "Hasil Analisis",
       disableFilters: true,
-      Cell: ({ cell }) => (
-        <a href={`${cell.row.values.Link_JDIH}`}>
-          <Button variant="link">
-            Detail
-          </Button>
-        </a>
-      ),
     },
   ];
 
@@ -75,7 +63,23 @@ export default function LongList() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">Daftar Jabatan Kritikal</Heading>
+          <Heading mb="4rem">Rekomendasi JA ke JF</Heading>
+          <Text fontSize="2xl" mb="2rem">
+            Berikut ini merupakan Daftar JA yang direkomendasikan untuk
+            upgrading ke Jabatan Fungsional yang Ditetapkan.
+          </Text>
+          <Text fontSize="xl" mb="2rem">
+            Daftar rekomendasi JA ke JF berisi nama jabatan yang berpotensi
+            untuk digantikan mesin di masa mendatang atau jabatan yang tugasnya
+            terdampak dari perkembangan teknologi informasi / digitalisasi
+            terhadap jabatan – jabatan yang ada. Jabatan tersebut dapat
+            diintegrasikan dan/ atau dikembangkan kompetensinya mengikuti
+            perkembangan teknologi informasi / digitalisasi / otomatisasi.
+            Setelah dilakukan identifikasi, ditemukan beberapa nama JA yang
+            tugasnya beririsan dengan JF yang ada sehingga nama-nama JA tersebut
+            dapat dilakukan upgrading jabatan dengan mengakomodir nama jabatan
+            fungsional yang tugasnya sama.
+          </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>
       )}
