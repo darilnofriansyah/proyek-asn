@@ -9,6 +9,7 @@ import { useTranslation, initReactI18next } from "react-i18next";
 import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import LoadingSpinner from "./components/loadingspinner";
+import { createBreakpoints } from '@chakra-ui/theme-tools'
 
 i18n
   .use(HttpApi)
@@ -34,11 +35,20 @@ const loadingMarkup = (
   </>
 );
 
+const breakpoints = createBreakpoints({
+  sm: '30em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+  '2xl': '96em',
+})
+
 const theme = extendTheme({
   colors: {
     yellowPrimary: "#FED900",
     yellowSecondary: "#FFC000",
   },
+  breakpoints
 });
 
 ReactDOM.render(

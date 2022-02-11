@@ -6,13 +6,13 @@ import overview from "../../../assets/images/chart/overview.png";
 export default function Overview() {
   const {t} = useTranslation();
   return (
-    <Flex direction="column" pt="4rem" px="4rem">
-      <Stack spacing="2rem">
-        <Heading>{t('title_overview')}</Heading>
-        <Text fontSize="2xl">
+    <Flex direction="column" py="2rem" pt="4rem" px="4rem">
+      <Stack mb="2rem" spacing="2rem">
+        <Heading fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>{t('title_overview')}</Heading>
+        <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
           {t('description_overview')}
         </Text>
-        <Heading>{t('diagram_overview')}</Heading>
+        <Heading fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>{t('diagram_overview')}</Heading>
       </Stack>
       <Flex justifyContent="center">
         <Image src={overview} />

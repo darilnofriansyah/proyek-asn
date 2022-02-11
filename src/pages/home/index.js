@@ -35,7 +35,7 @@ export default function Home() {
           px={10}
           bgColor="rgba(255, 255, 255, 0.6)"
         >
-          <Heading fontSize={{ base: "3xl", lg: "5xl", xl: "7xl" }}>
+          <Heading fontSize={{ base: "xl", lg: "3xl", xl: "5xl", "2xl":"7xl" }}>
             {t("title")}
           </Heading>
         </Flex>
@@ -56,10 +56,10 @@ export default function Home() {
           bgColor={{ base: "rgba(255, 255, 255, 0.6)", xl: "none" }}
         >
           <Stack>
-            <Heading fontSize={{ base: "3xl", xl: "5xl" }}>
+            <Heading fontSize={{ base: "xl", xl: "3xl", "2xl": "5xl" }}>
               {t("title_definition")}
             </Heading>
-            <Text lineHeight="2" fontSize={{ base: "lg", xl: "2xl" }}>
+            <Text lineHeight="2" fontSize={{ base: "md", xl: "lg", "2xl":"2xl" }}>
               {t("description_definition")}
             </Text>
             <Link to="/about">
@@ -87,10 +87,10 @@ export default function Home() {
         <GridItem colSpan={1}>
           <Flex p={{ base: 3, md: 10 }} direction="column">
             <Stack>
-              <Heading fontSize={{ base: "3xl", xl: "5xl" }}>
+              <Heading fontSize={{ base: "xl", xl: "3xl", "2xl": "5xl" }}>
                 {t("title_methodology")}
               </Heading>
-              <Text lineHeight="2" fontSize={{ base: "lg", xl: "2xl" }}>
+              <Text lineHeight="2" fontSize={{ base: "md", xl: "lg", "2xl":"2xl" }}>
                 {t("description_methodology")}
               </Text>
               <Link to="/about">
@@ -121,10 +121,10 @@ export default function Home() {
           bgColor={{ base: "rgba(255, 255, 255, 0.6)", xl: "none" }}
         >
           <Stack>
-            <Heading fontSize={{ base: "3xl", xl: "5xl" }}>
+            <Heading fontSize={{ base: "xl", xl: "3xl", "2xl": "5xl" }}>
               {t("title_benefit")}
             </Heading>
-            <Text lineHeight="2" fontSize={{ base: "lg", xl: "2xl" }}>
+            <Text lineHeight="2" fontSize={{ base: "md", xl: "lg", "2xl":"2xl" }}>
               {t("description_benefit")}
             </Text>
             {/* <Link to="/about">
