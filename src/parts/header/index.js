@@ -1,12 +1,34 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Image } from "@chakra-ui/image";
 import { Box, Flex, Heading, Spacer, Stack, Text } from "@chakra-ui/layout";
-import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
+  Button,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  List,
+  ListItem,
+} from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo/logo_panrb.png";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
+import { useMediaQuery } from "@chakra-ui/react";
 
 const GlobeIcon = ({ width = 24, height = 24 }) => (
   <svg
@@ -36,12 +58,15 @@ const languages = [
 
 export default function Header() {
   const { t } = useTranslation();
+  const [responsive] = useMediaQuery("(min-width: 1000px)");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   return (
-    <Flex px={{ base: "2rem", lg: "5rem", xl: "10rem" }} py={5}>
+    <Flex px={{ base: "2rem", xl: "5rem", "2xl": "10rem" }} py={5}>
       <Box mx="auto">
         <a href="/">
-          <Image src={logo} width="210px" minW="210px" />
+          <Image src={logo} width={{ base:"90px", lg:"150px", "2xl":"210px"}} minW="90px" />
         </a>
       </Box>
       <Spacer />
@@ -51,110 +76,205 @@ export default function Header() {
         justifyContent="center"
         alignItems="center"
       >
-        <Heading fontSize={{ base: "xl", xl: "2xl" }}>
-          <a href="/about">{t("header_about")}</a>
-        </Heading>
-        <Menu closeOnBlur="true">
-          <MenuButton>
-            <Stack
-              justifyContent="center"
-              alignItems="center"
-              spacing={1}
-              direction="row"
+        {responsive ? (
+          <>
+            <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+              <a href="/about">{t("header_about")}</a>
+            </Heading>
+            <Menu closeOnBlur="true">
+              <MenuButton>
+                <Stack
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={1}
+                  direction="row"
+                >
+                  <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                    {t("header_methodology")}
+                  </Heading>
+                  <ChevronDownIcon />
+                </Stack>
+              </MenuButton>
+              <MenuList>
+                <a href="/metodologi/overview">
+                  <MenuItem>Ikhtisar</MenuItem>
+                </a>
+                <a href="/metodologi/topdown">
+                  <MenuItem>Top Down</MenuItem>
+                </a>
+                <a href="/metodologi/bottomup">
+                  <MenuItem>Bottom Up</MenuItem>
+                </a>
+                <a href="/metodologi/dovetailing">
+                  <MenuItem>Dovetailing</MenuItem>
+                </a>
+              </MenuList>
+            </Menu>
+            <Menu closeOnBlur="true">
+              <MenuButton>
+                <Stack
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={1}
+                  direction="row"
+                >
+                  <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                    {t("header_col")}
+                  </Heading>
+                  <ChevronDownIcon />
+                </Stack>
+              </MenuButton>
+              <MenuList>
+                <Link to="/daftar-jabatan-kritikal">
+                  <MenuItem>Daftar Jabatan Kritikal</MenuItem>
+                </Link>
+                <Link to="/rekomendasi-ja-jf">
+                  <MenuItem>Rekomendasi JA ke JF</MenuItem>
+                </Link>
+                <Link to="/proyeksi-masa-datang">
+                  <MenuItem>Proyeksi Masa Datang</MenuItem>
+                </Link>
+                <Link to="/jf-strategis">
+                  <MenuItem>JF Strategis 2020-2021</MenuItem>
+                </Link>
+                <Link to="/jpt-kritikal">
+                  <MenuItem>JPT Kritikal</MenuItem>
+                </Link>
+                <Link to="/jpt-kritikal">
+                  <MenuItem>Kompetensi Utama JPT Kritikal</MenuItem>
+                </Link>
+                <Link to="/jpt-kritis">
+                  <MenuItem>Kompetensi Utama JF Kritikal</MenuItem>
+                </Link>
+                <Link to="/core-competence">
+                  <MenuItem>Kompetensi Utama JF Proyektif</MenuItem>
+                </Link>
+              </MenuList>
+            </Menu>
+            <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+              <a href="/contact">{t("header_contact")}</a>
+            </Heading>
+            <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+              <Link to="/FAQ">{t("header_faq")}</Link>
+            </Heading>
+            <Menu closeOnBlur="true">
+              <MenuButton>
+                <Stack
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={1}
+                  direction="row"
+                >
+                  <GlobeIcon />
+                  <ChevronDownIcon />
+                </Stack>
+              </MenuButton>
+              <MenuList>
+                {languages.map(({ code, name, country_code }) => (
+                  <MenuItem
+                    onClick={() => {
+                      i18next.changeLanguage(code);
+                    }}
+                    key={country_code}
+                  >
+                    <a href="#">{name}</a>
+                  </MenuItem>
+                ))}
+              </MenuList>
+            </Menu>
+          </>
+        ) : (
+          <>
+            <Button ref={btnRef} onClick={onOpen}>
+              <HamburgerIcon />
+            </Button>
+            <Drawer
+              isOpen={isOpen}
+              placement="right"
+              onClose={onClose}
+              finalFocusRef={btnRef}
             >
-              <Heading fontSize={{ base: "xl", xl: "2xl" }}>
-                {t("header_methodology")}
-              </Heading>
-              <ChevronDownIcon />
-            </Stack>
-          </MenuButton>
-          <MenuList>
-            <a href="/metodologi/overview">
-              <MenuItem>Ikhtisar</MenuItem>
-            </a>
-            <a href="/metodologi/topdown">
-              <MenuItem>Top Down</MenuItem>
-            </a>
-            <a href="/metodologi/bottomup">
-              <MenuItem>Bottom Up</MenuItem>
-            </a>
-            <a href="/metodologi/dovetailing">
-              <MenuItem>Dovetailing</MenuItem>
-            </a>
-          </MenuList>
-        </Menu>
-        <Menu closeOnBlur="true">
-          <MenuButton>
-            <Stack
-              justifyContent="center"
-              alignItems="center"
-              spacing={1}
-              direction="row"
-            >
-              <Heading fontSize={{ base: "xl", xl: "2xl" }}>
-                {t("header_col")}
-              </Heading>
-              <ChevronDownIcon />
-            </Stack>
-          </MenuButton>
-          <MenuList>
-            <Link to="/daftar-jabatan-kritikal">
-              <MenuItem>Daftar Jabatan Kritikal</MenuItem>
-            </Link>
-            <Link to="/rekomendasi-ja-jf">
-              <MenuItem>Rekomendasi JA ke JF</MenuItem>
-            </Link>
-            <Link to="/proyeksi-masa-datang">
-              <MenuItem>Proyeksi Masa Datang</MenuItem>
-            </Link>
-            <Link to="/jf-strategis">
-              <MenuItem>JF Strategis 2020-2021</MenuItem>
-            </Link>
-            <Link to="/jpt-kritikal">
-              <MenuItem>JPT Kritikal</MenuItem>
-            </Link>
-            <Link to="/jpt-kritikal">
-              <MenuItem>Kompetensi Utama JPT Kritikal</MenuItem>
-            </Link>
-            <Link to="/jpt-kritis">
-              <MenuItem>Kompetensi Utama JF Kritikal</MenuItem>
-            </Link>
-            <Link to="/core-competence">
-              <MenuItem>Kompetensi Utama JF Proyektif</MenuItem>
-            </Link>
-          </MenuList>
-        </Menu>
-        <Heading fontSize={{ base: "xl", xl: "2xl" }}>
-          <a href="/contact">{t("header_contact")}</a>
-        </Heading>
-        <Heading fontSize={{ base: "xl", xl: "2xl" }}>
-          <Link to="/FAQ">{t("header_faq")}</Link>
-        </Heading>
-        <Menu closeOnBlur="true">
-          <MenuButton>
-            <Stack
-              justifyContent="center"
-              alignItems="center"
-              spacing={1}
-              direction="row"
-            >
-              <GlobeIcon />
-              <ChevronDownIcon />
-            </Stack>
-          </MenuButton>
-          <MenuList>
-            {languages.map(({ code, name, country_code }) => (
-              <MenuItem
-                onClick={() => {
-                  i18next.changeLanguage(code);
-                }}
-                key={country_code}
-              >
-                <a href="#">{name}</a>
-              </MenuItem>
-            ))}
-          </MenuList>
-        </Menu>
+              <DrawerOverlay />
+              <DrawerContent>
+                <DrawerCloseButton />
+                <DrawerHeader>Menu</DrawerHeader>
+
+                <DrawerBody>
+                  <Accordion allowToggle>
+                    <AccordionItem>
+                      <AccordionButton>
+                        <Box flex="1" textAlign="left">
+                          <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                            <a href="/about">{t("header_about")}</a>
+                          </Heading>
+                        </Box>
+                      </AccordionButton>
+                    </AccordionItem>
+                    <AccordionItem>
+                      <AccordionButton>
+                        <Box flex="1" textAlign="left">
+                          <Heading fontSize="md">
+                            {t("header_methodology")}
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                      <AccordionPanel pb={4} fontSize="md">
+                        <List spacing="1rem">
+                          <ListItem>Ikhtisar</ListItem>
+                          <ListItem>Top Down</ListItem>
+                          <ListItem>Bottom Up</ListItem>
+                          <ListItem>Dovetailing</ListItem>
+                        </List>
+                      </AccordionPanel>
+                    </AccordionItem>
+                    <AccordionItem>
+                      <AccordionButton>
+                        <Box flex="1" textAlign="left">
+                          <Heading fontSize="md">
+                            {t("header_col")}
+                          </Heading>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                      <AccordionPanel pb={4} fontSize="md">
+                        <List spacing="1rem">
+                          <ListItem>Daftar Jabatan Kritikal</ListItem>
+                          <ListItem>Rekmoendasi JA ke JF</ListItem>
+                          <ListItem>Proyeksi Masa Datang</ListItem>
+                          <ListItem>JF Strategis 2020-2021</ListItem>
+                          <ListItem>JPT Kritikal</ListItem>
+                          <ListItem>Kompensansi Utama JPT Kritikal</ListItem>
+                          <ListItem>Kompetensi Utama JF Kritikal</ListItem>
+                          <ListItem>Kompetensi Utama JF Proyektif</ListItem>
+                        </List>
+                      </AccordionPanel>
+                    </AccordionItem>
+                    <AccordionItem>
+                      <AccordionButton>
+                        <Box flex="1" textAlign="left">
+                          <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                            <a href="/contact">{t("header_contact")}</a>
+                          </Heading>
+                        </Box>
+                      </AccordionButton>
+                    </AccordionItem>
+                    <AccordionItem>
+                      <AccordionButton>
+                        <Box flex="1" textAlign="left">
+                          <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                            <a href="/faq">{t("header_faq")}</a>
+                          </Heading>
+                        </Box>
+                      </AccordionButton>
+                    </AccordionItem>
+                  </Accordion>
+                </DrawerBody>
+
+              </DrawerContent>
+            </Drawer>
+          </>
+        )}
       </Stack>
     </Flex>
   );

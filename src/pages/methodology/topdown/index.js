@@ -19,16 +19,24 @@ export default function Topdown() {
     <Flex pt="4rem" px="4rem">
       {/* Metodologi Top Down */}
       <Stack spacing="2rem" mb="2rem">
-        <Heading textColor="red.600" fontSize="6xl">
+        <Heading
+          textColor="red.600"
+          fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}
+        >
           {t("title_topdown")}
         </Heading>
-        <Text fontSize="2xl">{t("description_topdown")}</Text>
-        <Text fontWeight="400" fontSize="4xl">
+        <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
+          {t("description_topdown")}
+        </Text>
+        <Text
+          fontWeight="400"
+          fontSize={{ base: "lg", xl: "2xl", "2xl": "4xl" }}
+        >
           {t("diagram_topdown")}
         </Text>
         <SimpleGrid
-          px="5rem"
-          spacing={{ base: "2rem", xl: "5rem" }}
+          px={{ base: "2rem", "2xl": "5rem" }}
+          spacing={{ base: "2rem", "2xl": "5rem" }}
           columns={{ base: 1, xl: 3 }}
         >
           {t("indikator_topdown", { returnObjects: true }).map(
@@ -49,7 +57,9 @@ export default function Topdown() {
                 >
                   <Stack mb="2rem" direction="row">
                     {/* <Image src={chart_down} width="3rem" height="auto"/> */}
-                    <Heading>{title}</Heading>
+                    <Heading fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>
+                      {title}
+                    </Heading>
                   </Stack>
                 </Flex>
                 <Flex direction="column" px="4rem">
