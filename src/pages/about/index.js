@@ -17,11 +17,11 @@ export default function About() {
   const { t } = useTranslation();
 
   return (
-    <Flex pt="4rem" px={{base:"2rem", "2xl":"4rem"}} mb="3rem">
+    <Flex pt={{base: "1rem", xl:"3rem"}} px={{base:"2rem", "2xl":"4rem"}} mb="3rem">
       <SimpleGrid spacing={{base: "2rem", "2xl":"5rem"}} columns={{ base: 1, md: 2 }}>
         <Flex direction="column">
           <Heading
-            px="4rem"
+            px={{base: "1rem", xl:"3rem"}}
             fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}
             mb="2rem"
           >
@@ -29,7 +29,7 @@ export default function About() {
           </Heading>
           <Heading
             padding="1rem"
-            px="4rem"
+            px={{base: "1rem", xl:"3rem"}}
             borderRadius="50px"
             bgColor="yellowPrimary"
             fontSize={{ base: "lg", xl: "2xl", "2xl": "4xl" }}
@@ -37,12 +37,12 @@ export default function About() {
           >
             {t("subtitle1_about")}
           </Heading>
-          <Text mb="3rem" mx="4rem" fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
+          <Text mb="3rem" mx={{base: "1rem", xl:"3rem"}} fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
             {t("description1_about")}
           </Text>
           <Heading
             padding="1rem"
-            px="4rem"
+            px={{base: "1rem", xl:"3rem"}}
             borderRadius="50px"
             bgColor="yellowPrimary"
             fontSize={{ base: "lg", xl: "2xl", "2xl": "4xl" }}
@@ -52,7 +52,7 @@ export default function About() {
           </Heading>
           <Text
             mb="3rem"
-            mx="4rem"
+            mx={{base: "1rem", xl:"3rem"}}
             fontSize={{ base: "md", xl: "xl", "2xl": "3xl" }}
             color="red.600"
             fontWeight="500"
@@ -61,7 +61,7 @@ export default function About() {
               {t("peraturan_about")}
             </a>
           </Text>
-          <Stack mb="3rem" px="4rem" spacing={{base:"1rem", "2xl":"2rem"}}>
+          <Stack mb="3rem" px={{base: "1rem", xl:"3rem"}} spacing={{base:"1rem", "2xl":"2rem"}}>
             <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>{t("description2_about")}</Text>
             <Divider />
             <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>{t("poin1_about")}</Text>
@@ -69,8 +69,8 @@ export default function About() {
             <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>{t("poin2_about")}</Text>
           </Stack>
         </Flex>
-        <Flex bgColor="red.600" p="3rem" direction="column">
-          <Stack bgColor="red.500" spacing="2rem" p="3rem" mb="1rem">
+        <Flex bgColor="red.600" p={{base: "1rem", xl:"3rem"}} direction="column">
+          <Stack bgColor="red.500" spacing="2rem" p={{base: "1rem", xl:"3rem"}} mb="1rem">
             <Heading color="white">{t("title_about_red")}</Heading>
             {/* Defisit */}
             <Stack>

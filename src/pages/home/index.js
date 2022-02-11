@@ -24,10 +24,10 @@ export default function Home() {
       {/* Hero Section */}
       <SimpleGrid
         py="15rem"
-        px={{ base: "4rem", lg: "8rem", xl: "10rem" }}
+        px={{ base: "2rem", lg: "8rem", xl: "10rem" }}
         bgSize="cover"
         bgImage={hero}
-        columns={2}
+        columns={{base:1, md:2}}
       >
         <Flex
           py={10}
@@ -43,8 +43,8 @@ export default function Home() {
       {/* Definisi Section */}
       <SimpleGrid
         py="10rem"
-        px={{ base: "4rem", lg: "8rem", xl: "10rem" }}
-        columns={2}
+        px={{ base: "2rem", lg: "8rem", xl: "10rem" }}
+        columns={{base:1, md:2}}
         bgSize="cover"
         bgImage={notebook}
         bgPos="right"
@@ -77,15 +77,15 @@ export default function Home() {
       {/* Grey Section */}
       <Grid
         py="10rem"
-        px={{ base: "4rem", lg: "8rem", xl: "10rem" }}
+        px={{ base: "2rem", lg: "8rem", xl: "10rem" }}
         bgSize="cover"
         bgImage={workplace}
         bgPos="left"
         templateColumns="repeat(2, 1fr)"
       >
-        <GridItem colSpan={1}></GridItem>
-        <GridItem colSpan={1}>
-          <Flex p={{ base: 3, md: 10 }} direction="column">
+        <GridItem colSpan={{base: "none", md:1}}></GridItem>
+        <GridItem colSpan={{base: 2, md:1}}>
+          <Flex bgColor={{ base: "rgba(255, 255, 255, 0.6)", xl: "none" }} p={{ base: 3, md: 10 }} direction="column">
             <Stack>
               <Heading fontSize={{ base: "xl", xl: "3xl", "2xl": "5xl" }}>
                 {t("title_methodology")}
@@ -108,8 +108,8 @@ export default function Home() {
       </Grid>
       <SimpleGrid
         py="10rem"
-        px={{ base: "4rem", lg: "8rem", xl: "10rem" }}
-        columns={2}
+        px={{ base: "2rem", lg: "8rem", xl: "10rem" }}
+        columns={{base:1, md:2}}
         bgSize="cover"
         bgImage={employee}
         bgPos="right"
@@ -127,15 +127,6 @@ export default function Home() {
             <Text lineHeight="2" fontSize={{ base: "md", xl: "lg", "2xl":"2xl" }}>
               {t("description_benefit")}
             </Text>
-            {/* <Link to="/about">
-              <Text
-                as="u"
-                fontWeight="500"
-                fontSize={{ base: "lg", xl: "2xl" }}
-              >
-                {t("more")}
-              </Text>
-            </Link> */}
           </Stack>
         </Flex>
       </SimpleGrid>
