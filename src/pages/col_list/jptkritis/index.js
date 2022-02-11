@@ -58,7 +58,7 @@ export default function JPTKritis() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">Daftar Jabatan Kritis JPT</Heading>
+          <Heading mb="4rem">Daftar Jabatan Kritikal JPT</Heading>
           <Text mb="1rem" fontSize="xl">
             Data ini merupakan daftar jabatan kritis jenjang JPT yang
             berkontribusi pada proyek prioritas strategis nasional (Major
