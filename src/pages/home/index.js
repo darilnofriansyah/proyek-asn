@@ -23,7 +23,7 @@ export default function Home() {
     <Flex bgColor="gray.100" direction="column" spacing={5}>
       {/* Hero Section */}
       <SimpleGrid
-        py="15rem"
+        py={{base:"5rem", lg:"8rem", xl:"10rem", '2xl':"15rem"}}
         px={{ base: "2rem", lg: "8rem", xl: "10rem" }}
         bgSize="cover"
         bgImage={hero}
@@ -42,7 +42,7 @@ export default function Home() {
       </SimpleGrid>
       {/* Definisi Section */}
       <SimpleGrid
-        py="10rem"
+        py={{base:"4rem", lg:"6rem", xl:"8rem", '2xl':"10rem"}}
         px={{ base: "2rem", lg: "8rem", xl: "10rem" }}
         columns={{base:1, md:2}}
         bgSize="cover"
@@ -76,7 +76,7 @@ export default function Home() {
       </SimpleGrid>
       {/* Grey Section */}
       <Grid
-        py="10rem"
+        py={{base:"4rem", lg:"6rem", xl:"8rem", '2xl':"10rem"}}
         px={{ base: "2rem", lg: "8rem", xl: "10rem" }}
         bgSize="cover"
         bgImage={workplace}
@@ -107,7 +107,7 @@ export default function Home() {
         </GridItem>
       </Grid>
       <SimpleGrid
-        py="10rem"
+        py={{base:"4rem", lg:"6rem", xl:"8rem", '2xl':"10rem"}}
         px={{ base: "2rem", lg: "8rem", xl: "10rem" }}
         columns={{base:1, md:2}}
         bgSize="cover"

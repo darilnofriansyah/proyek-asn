@@ -19,14 +19,14 @@ export default function Footer() {
             {t('footer')}
           </Heading>
         </Flex>
-        <Flex justifyContent="center" alignItems="center" direction={{ base: "column", xl: "row" }}>
+        <Flex justifyContent="center" alignItems="center" direction={{ base: "column", md: "row" }}>
           <Stack direction="row" alignItems="center" direction={{ base: "column", md: "row" }}>
             <Image m="4rem" src={logo_panrb} width="16rem" minWidth="5rem" />
-            <Image m="4rem" src={logo_kasn} height="7rem" minWidth="3rem" />
+            <Image m="4rem" src={logo_kasn} width="7rem" minWidth="3rem" />
           </Stack>
           <Stack direction="row" alignItems="center" direction={{ base: "column", md: "row" }}>
             <Image m="4rem" src={logo_bkn} width="13rem" minWidth="5rem" />
-            <Image m="4rem" src={logo_lanri} height="7rem" minWidth="5rem" />
+            <Image m="4rem" src={logo_lanri} width="13rem" minWidth="5rem" />
           </Stack>
           <Image m="4rem" src={logo_bappenas} width="16rem" minWidth="5rem" />
         </Flex>

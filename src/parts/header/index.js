@@ -45,14 +45,14 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
 
 const languages = [
   {
-    code: "en",
-    name: "English",
-    country_code: "en",
-  },
-  {
     code: "id",
     name: "Indonesia",
     country_code: "id",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "en",
   },
 ];
 
@@ -66,7 +66,11 @@ export default function Header() {
     <Flex px={{ base: "2rem", xl: "5rem", "2xl": "10rem" }} py={5}>
       <Box mx="auto">
         <a href="/">
-          <Image src={logo} width={{ base:"90px", lg:"150px", "2xl":"210px"}} minW="90px" />
+          <Image
+            src={logo}
+            width={{ base: "90px", lg: "150px", "2xl": "210px" }}
+            minW="90px"
+          />
         </a>
       </Box>
       <Spacer />
@@ -78,7 +82,7 @@ export default function Header() {
       >
         {responsive ? (
           <>
-            <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+            <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
               <a href="/about">{t("header_about")}</a>
             </Heading>
             <Menu closeOnBlur="true">
@@ -89,7 +93,7 @@ export default function Header() {
                   spacing={1}
                   direction="row"
                 >
-                  <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                  <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
                     {t("header_methodology")}
                   </Heading>
                   <ChevronDownIcon />
@@ -118,7 +122,7 @@ export default function Header() {
                   spacing={1}
                   direction="row"
                 >
-                  <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                  <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
                     {t("header_col")}
                   </Heading>
                   <ChevronDownIcon />
@@ -128,9 +132,9 @@ export default function Header() {
                 <Link to="/daftar-jabatan-kritikal">
                   <MenuItem>Daftar Jabatan Kritikal</MenuItem>
                 </Link>
-                <Link to="/rekomendasi-ja-jf">
+                {/* <Link to="/rekomendasi-ja-jf">
                   <MenuItem>Rekomendasi JA ke JF</MenuItem>
-                </Link>
+                </Link> */}
                 <Link to="/proyeksi-masa-datang">
                   <MenuItem>Proyeksi Masa Datang</MenuItem>
                 </Link>
@@ -140,21 +144,48 @@ export default function Header() {
                 <Link to="/jpt-kritikal">
                   <MenuItem>JPT Kritikal</MenuItem>
                 </Link>
-                <Link to="/jpt-kritikal">
-                  <MenuItem>Kompetensi Utama JPT Kritikal</MenuItem>
-                </Link>
-                <Link to="/jpt-kritis">
-                  <MenuItem>Kompetensi Utama JF Kritikal</MenuItem>
-                </Link>
-                <Link to="/core-competence">
-                  <MenuItem>Kompetensi Utama JF Proyektif</MenuItem>
-                </Link>
+                <Accordion allowToggle>
+                  <AccordionItem>
+                    <AccordionButton>
+                      <Box flex="1" textAlign="left">
+                        <Text>
+                          Daftar Jabatan Kritikal, Major Project, dan Level
+                          Kompetensi
+                        </Text>
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                    <AccordionPanel pb={4}>
+                      <Stack>
+                        <Link to="/jpt-kritikal">JPT Kritikal</Link>
+                        <Link to="/jpt-kritis">JF Kritikal</Link>
+                        <Link to="/core-competence">JF Proyektif Kritikal</Link>
+                      </Stack>
+                    </AccordionPanel>
+                  </AccordionItem>
+                </Accordion>
+                {/* <Menu>
+                  <MenuButton>
+                    Daftar Jabatan Kritikal, Major Project, dan Level Kompetensi
+                  </MenuButton>
+                  <MenuList>
+                    <Link to="/jpt-kritikal">
+                      <MenuItem>Kompetensi Utama JPT Kritikal</MenuItem>
+                    </Link>
+                    <Link to="/jpt-kritis">
+                      <MenuItem>Kompetensi Utama JF Kritikal</MenuItem>
+                    </Link>
+                    <Link to="/core-competence">
+                      <MenuItem>Kompetensi Utama JF Proyektif</MenuItem>
+                    </Link>
+                  </MenuList>
+                </Menu> */}
               </MenuList>
             </Menu>
-            <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+            <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
               <a href="/contact">{t("header_contact")}</a>
             </Heading>
-            <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+            <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
               <Link to="/FAQ">{t("header_faq")}</Link>
             </Heading>
             <Menu closeOnBlur="true">
@@ -204,7 +235,9 @@ export default function Header() {
                     <AccordionItem>
                       <AccordionButton>
                         <Box flex="1" textAlign="left">
-                          <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                          <Heading
+                            fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
+                          >
                             <a href="/about">{t("header_about")}</a>
                           </Heading>
                         </Box>
@@ -231,9 +264,7 @@ export default function Header() {
                     <AccordionItem>
                       <AccordionButton>
                         <Box flex="1" textAlign="left">
-                          <Heading fontSize="md">
-                            {t("header_col")}
-                          </Heading>
+                          <Heading fontSize="md">{t("header_col")}</Heading>
                         </Box>
                         <AccordionIcon />
                       </AccordionButton>
@@ -253,7 +284,9 @@ export default function Header() {
                     <AccordionItem>
                       <AccordionButton>
                         <Box flex="1" textAlign="left">
-                          <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                          <Heading
+                            fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
+                          >
                             <a href="/contact">{t("header_contact")}</a>
                           </Heading>
                         </Box>
@@ -262,7 +295,9 @@ export default function Header() {
                     <AccordionItem>
                       <AccordionButton>
                         <Box flex="1" textAlign="left">
-                          <Heading fontSize={{ base: "md", xl: "xl", "2xl":"2xl" }}>
+                          <Heading
+                            fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
+                          >
                             <a href="/faq">{t("header_faq")}</a>
                           </Heading>
                         </Box>
@@ -270,7 +305,6 @@ export default function Header() {
                     </AccordionItem>
                   </Accordion>
                 </DrawerBody>
-
               </DrawerContent>
             </Drawer>
           </>

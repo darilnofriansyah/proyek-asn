@@ -58,7 +58,7 @@ export default function Proyeksi() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">Proyeksi Masa Datang</Heading>
+          <Heading mb="4rem">Daftar Jabatan Kritikal Proyektif</Heading>
           <Text fontSize="xl" mb="2rem">
             Daftar proyektif jabatan kritikal (future jobs) merupakan nama-nama
             jabatan yang belum ada di daftar jabatan ASN saat ini namun

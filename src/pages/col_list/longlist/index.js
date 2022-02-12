@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Link } from "@chakra-ui/react";
+import { Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import CustomTable from "../../../components/table";
 import Papa from "papaparse";
@@ -61,9 +61,7 @@ export default function LongList() {
       disableFilters: true,
       Cell: ({ cell }) => (
         <a href={`${cell.row.values.Link_JDIH}`}>
-          <Button variant="link">
-            Detail
-          </Button>
+          <Button variant="link">Detail</Button>
         </a>
       ),
     },
@@ -76,6 +74,12 @@ export default function LongList() {
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
           <Heading mb="4rem">Daftar Jabatan Kritikal</Heading>
+          <Text fontSize="xl" mb="2rem">
+            Daftar Jabatan Kritikal adalah Jabatan Fungsional yang memiliki
+            tingkat kekritisan tinggi dilihat dari beberapa indikator yang telah
+            ditetapkan, dampak dari otomasi pekerjaan, dan sesuai dengan proyek
+            prioritas strategis nasional (Major Project).
+          </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>
       )}
