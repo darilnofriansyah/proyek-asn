@@ -37,7 +37,7 @@ export default function Topdown() {
         <SimpleGrid
           px={{ base: "2rem", "2xl": "5rem" }}
           spacing={{ base: "2rem", "2xl": "5rem" }}
-          columns={{ base: 1, xl: 3 }}
+          columns={{ base: 1, lg: 3 }}
         >
           {t("indikator_topdown", { returnObjects: true }).map(
             ({ title, content }) => (
@@ -57,7 +57,7 @@ export default function Topdown() {
                 >
                   <Stack mb="2rem" direction="row">
                     {/* <Image src={chart_down} width="3rem" height="auto"/> */}
-                    <Heading fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>
+                    <Heading fontSize={{ base: "lg", xl: "2xl", "2xl": "4xl" }}>
                       {title}
                     </Heading>
                   </Stack>

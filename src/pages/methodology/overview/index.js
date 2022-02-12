@@ -8,11 +8,11 @@ export default function Overview() {
   return (
     <Flex direction="column" py="2rem" pt="4rem" px="4rem">
       <Stack mb="2rem" spacing="2rem">
-        <Heading fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>{t('title_overview')}</Heading>
+        <Heading textColor="red.600" fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>{t('title_overview')}</Heading>
         <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
           {t('description_overview')}
         </Text>
-        <Heading fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>{t('diagram_overview')}</Heading>
+        <Heading fontSize={{ base: "lg", xl: "2xl", "2xl": "4xl" }}>{t('diagram_overview')}</Heading>
       </Stack>
       <Flex justifyContent="center">
         <Image src={overview} />
