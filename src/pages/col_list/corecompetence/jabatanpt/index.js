@@ -1,16 +1,25 @@
-import { Button, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Link,
+  List,
+  ListIcon,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import CustomTable from "../../../components/table";
+import CustomTable from "../../../../components/table";
 import Papa from "papaparse";
-import LoadingSpinner from "../../../components/loadingspinner";
-import ColumnFilter from "../../../components/columnfilter";
+import LoadingSpinner from "../../../../components/loadingspinner";
+import ColumnFilter from "../../../../components/columnfilter";
 
-export default function JFStrategis() {
+export default function JabatanPT() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function getData() {
-      const response = await fetch("/files/JF_Strategis.csv");
+      const response = await fetch("/files/Core_Competence_JPT.csv");
       const reader = response.body.getReader();
       const result = await reader.read(); // raw array
       const decoder = new TextDecoder("utf-8");
@@ -19,7 +28,6 @@ export default function JFStrategis() {
       const rows = results.data; // array of objects
       setData(rows);
       setLoading(false);
-      console.log(rows);
     }
     if (loading) {
       getData();
@@ -36,18 +44,33 @@ export default function JFStrategis() {
       disableFilters: true,
     },
     {
-      Header: "Bidang",
+      Header: "Bidang Major Project",
       accessor: "Bidang",
       Filter: ColumnFilter,
     },
     {
-      Header: "Kelompok Jabatan",
-      accessor: "Kelompok jabatan",
-      Filter: ColumnFilter,
+      Header: "Major Project",
+      accessor: "Major Project",
+      disableFilters: true,
     },
     {
-      Header: "Nama Jabatan",
-      accessor: "Nama Jabatan",
+      Header: "Bidang Jabatan",
+      accessor: "Nama Jabatan/Bidang",
+      disableFilters: true,
+    },
+    {
+      Header: "Tugas",
+      accessor: "Tugas",
+      disableFilters: true,
+    },
+    {
+      Header: "Level Kompetensi (Permenpan 38/2017)",
+      accessor: "Level Competency Permenpan 38 Tahun 2017",
+      disableFilters: true,
+    },
+    {
+      Header: "Level Kompetensi SKKNI",
+      accessor: "Level Competency SKKNI",
       disableFilters: true,
     },
   ];
@@ -58,15 +81,10 @@ export default function JFStrategis() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">JF Strategis 2020-2021</Heading>
-          <Text fontSize="xl" mb="2rem">
-            JF Strategis 2020-2021 merupakan nama-nama jabatan fungsional yang
-            ditetapkan dalam Permenpan RB periode tahun 2020-2021 dan sesuai
-            dengan kebutuhan Proyek Prioritas Strategis Nasional. Usulan daftar
-            jabatan ini berasal dari focus group discussion dengan para K/L
-            pelaksana program prioritas strategis, analisis data peta okupasi
-            nasional dan KBJI serta dari kajian literatur terhadap increasing
-            demand dari studi World Economic Forum (2020).
+          <Heading mb="2rem">Jabatan Pimpinan Tinggi Kritikal</Heading>
+          <Text mb="1rem" fontSize="xl">
+            Daftar ini menampilkan nama jabatan dengan jenis Jabatan Pimpinan
+            Tinggi yang kritikal.
           </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>
