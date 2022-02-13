@@ -58,14 +58,15 @@ export default function JPTKritis() {
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">Daftar Jabatan Kritikal JPT</Heading>
+          <Heading mb="4rem">
+            Daftar Jabatan Kritikal Jabatan Pimpinan Tinggi
+          </Heading>
           <Text mb="1rem" fontSize="xl">
-            Data ini merupakan daftar jabatan kritis jenjang JPT yang
+            Data ini merupakan daftar jabatan kritikal jenjang JPT yang
             berkontribusi pada proyek prioritas strategis nasional (Major
-            Project) dan visi Presiden dari akumulasi data pendekatan top down
-            dan bottom up. Data dipisahkan atas jenjang JPT dan dilengkapi
-            dengan instansi pengampu jabatan pimpinan tinggi pada proyek
-            prioritas strategis maupun visi presiden.
+            Project) dan visi Presiden. Data dipisahkan atas jenjang JPT dan
+            dilengkapi dengan instansi pengampu jabatan pimpinan tinggi pada
+            proyek prioritas strategis maupun visi presiden.
           </Text>
           <Text mb="4rem" fontSize="xl">
             Jabatan dengan kategori tertentu artinya diampu oleh
@@ -74,7 +75,7 @@ export default function JPTKritis() {
             Pemerintah Pusat, jabatan dengan keterangan Instansi Daerah
             menandakan bahwa jabatan tersebut terdapat pada beberapa K/L di
             Pemerintah Daerah. Sedangkan jabatan dengan keterangan “instansi
-            pusat- instansi daerah” sifatnya terbuka atau kebutuhan akan jabatan
+            pusat-instansi daerah” sifatnya terbuka atau kebutuhan akan jabatan
             tersebut tidak hanya di satu instansi tertentu melainkan ada di
             Pemerintah Pusat di Daerah.
           </Text>
