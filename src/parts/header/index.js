@@ -136,7 +136,7 @@ export default function Header() {
                   <MenuItem>Rekomendasi JA ke JF</MenuItem>
                 </Link> */}
                 <Link to="/proyeksi-masa-datang">
-                  <MenuItem>Proyeksi Masa Datang</MenuItem>
+                  <MenuItem>Daftar Jabatan Kritikal Proyektif</MenuItem>
                 </Link>
                 <Link to="/jf-strategis">
                   <MenuItem>JF Strategis 2020-2021</MenuItem>
