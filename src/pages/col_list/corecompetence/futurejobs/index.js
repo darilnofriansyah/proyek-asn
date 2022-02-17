@@ -82,7 +82,7 @@ export default function FutureJobs() {
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
           <Heading mb="2rem">Jabatan Fungsional Proyektif Kritikal</Heading>
-          <Text mb="1rem" fontSize="xl">
+          <Text mb="1rem" fontSize={{ base: "lg", xl: "lg", "2xl": "xl" }}>
             Daftar ini merupakan nama Jabatan Fungsional yang bersifat strategis
             dan diusulkan menjadi nama jabatan baru (JF Proyektif) untuk
             memperkuat pelaksanaan program prioritas strategis dan visi

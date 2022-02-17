@@ -82,7 +82,7 @@ export default function JabatanPT() {
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
           <Heading mb="2rem">Jabatan Pimpinan Tinggi Kritikal</Heading>
-          <Text mb="1rem" fontSize="xl">
+          <Text mb="1rem" fontSize={{ base: "lg", xl: "lg", "2xl": "xl" }}>
             Daftar ini menampilkan nama jabatan dengan jenis Jabatan Pimpinan
             Tinggi yang kritikal.
           </Text>

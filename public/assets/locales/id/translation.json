@@ -24,13 +24,17 @@
             "description": "Kesenjangan permintaan dan ketersediaan tenaga kerja dengan keterampilan tertentu"
         },
         {
-            "title": "STRATEGIC",
+            "title": "HIGH-SKILLED",
             "description": "Keterampilan tertentu yang sesuai dengan tujuan pembangunan strategis negara"
         },
         {
-            "title": "HIGH-SKILLED",
+            "title": "STRATEGIC",
             "description": "Jabatan Kritikal mengidentifikasi pekerjaan dengan keterampilan tertentu"
         }
+    ],
+    "description3_about":[
+        "Di dalam menilai tingkat kritikal sebuah jabatan, perlu dilihat dari beberapa kondisi. Pertama adalah jabatan yang dibuka melalui open recruitment; kemudian disebut dengan Vacancy. Kedua adalah jabatan-jabatan yang sudah ada dan terisi, namun memiliki kesenjangan antara kriteria yang dibutuhkan sebuah jabatan dengan kompetensi pekerja yang menjabatnya; kemudian ini disebut dengan istilah Mismatch. Ketiga adalah kondisi kebutuhan jabatan tertentu di masa mendatang; kemudian disebut dengan istilah Future Job.",
+        "Kondisi-kondisi Vacancy, Mismatch, dan Future Job jika dipetakan ke dalam kriteria Jabatan Kritikal dapat dijelaskan sesuai dengan gambar di atas. Kondisi Vacancy terpetakan kepada dua level yakni Entry Level (CPNS) dan Mid-High Level (Seleksi Terbuka). Mismatch terpetakan kepada level Mid-High Level. Sementara Future Job merupakan jabatan-jabatan strategis yang belum ada sebelumnya."
     ],
 
     
