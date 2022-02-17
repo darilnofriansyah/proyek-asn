@@ -82,7 +82,7 @@ export default function JabatanFungsional() {
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
           <Heading mb="2rem">Jabatan Fungsional Kritikal</Heading>
-          <Text mb="1rem" fontSize="xl">
+          <Text mb="1rem" fontSize={{ base: "lg", xl: "lg", "2xl": "xl" }}>
             Daftar ini menampilan nama jabatan berdasarkan jenis Jabatan
             Fungsional yang sudah ditetapkan dalam Permenpan dan bersifat
             kritikal (JF Kritikal).

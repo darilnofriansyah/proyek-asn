@@ -157,6 +157,7 @@ export default function Header() {
                     </AccordionButton>
                     <AccordionPanel pb={4}>
                       <Stack>
+                        <Link to="/core-competence">Deskripsi</Link>
                         <Link to="/core-competence/jabatan-pimpinan-tinggi">JPT Kritikal</Link>
                         <Link to="/core-competence/jabatan-fungsional">JF Kritikal</Link>
                         <Link to="/core-competence/future-jobs">JF Proyektif Kritikal</Link>

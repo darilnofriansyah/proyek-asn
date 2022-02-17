@@ -16,7 +16,6 @@
     "description2_about":"Critical positions are core positions in an organization that meet certain characteristics. The characteristics of critical positions consist of:",
     "poin1_about":"a. Strategic and directly related to national priorities; and",
     "poin2_about":"b. Positions that require highly specialized and/or rare skills.",
-
     "title_about_red":"Three Critical Position Criteria",
     "three_point_about": [
         {
@@ -24,13 +23,17 @@
             "description": "Gap in demand and availability of labor with certain skills"
         },
         {
-            "title": "STRATEGIC",
+            "title": "HIGH-SKILLED",
             "description": "Specific skills that are in line with the country's strategic development goals"
         },
         {
-            "title": "HIGH-SKILLED",
+            "title": "STRATEGIC",
             "description": "Critical Jobs identify jobs with specific skills"
         }
+    ],
+    "description3_about":[
+        "In assessing the critical level of a position, it is necessary to look at several conditions. The first is a position that is opened through open recruitment; later called vacancy. Second, there are positions that already exist and are filled, but have a gap between the criteria required by a position and the competence of the workers who serve them; then this is called the Mismatch. The third is the condition of the need for certain positions in the future; later referred to as the Future Job.",
+        "Vacancy, Mismatch, and Future Job conditions if mapped into Critical Position criteria can be explained according to the picture above. Vacancy conditions are mapped to two levels, namely Entry Level (CPNS) and Mid-High Level (Open Selection). Mismatch is mapped to Mid-High Level. Meanwhile, Future Jobs are strategic positions that did not exist before."
     ],
 
     "title_overview":"Overview",
