@@ -14,43 +14,53 @@ import youtube from "../../assets/images/logo/YouTube.png";
 import { useTranslation } from "react-i18next";
 
 export default function Contact() {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <Flex alignItem="center" justifyContent="center" py="4rem" px="4rem">
-      <SimpleGrid spacing="5rem" columns={{ base: 1, md: 2 }}>
+    <Flex
+      alignItem="center"
+      justifyContent="center"
+      py={{ base: "2rem", lg: "4rem" }}
+      px={{ base: "2rem", lg: "4rem" }}
+      direction="column"
+    >
+      <Heading mb="2rem" fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>
+        {t("title_contactus")}
+      </Heading>
+      <SimpleGrid spacing={{base:"2rem", lg:"5rem"}} columns={{ base: 1, md: 2 }}>
         <Flex direction="column">
-          <Heading mb="2rem" fontSize="5xl">
-            {t("title_contactus")}
-          </Heading>
-          <Text fontSize="2xl" as="b">Deputi SDM Aparatur</Text>
-          <Text fontSize="2xl">
+          <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }} as="b">
+            Deputi SDM Aparatur
+          </Text>
+          <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
             Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi
           </Text>
-          <Text fontSize="2xl">
+          <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
             Jl. Jend. Sudirman Kav. 69 Jakarta Selatan - 12190 Indonesia
           </Text>
-          <Text fontSize="2xl">Telp. (+6221) 7398381 - 89</Text>
-          <Text fontSize="2xl">
+          <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
+            Telp. (+6221) 7398381 - 89
+          </Text>
+          <Text fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
             Email Persuratan Kementerian PANRB : persuratan@menpan.go.id
           </Text>
           <Stack
             justifyContent="center"
-            mt="4rem"
+            mt={{base:"2rem", lg:"4rem"}}
             direction="row"
             spacing="4rem"
           >
             <a href="https://www.facebook.com/kempanrb">
-              <Image w="4rem" src={facebook} />
+              <Image w={{base:"2rem", lg:"4rem"}} src={facebook} />
             </a>
             <a href="https://twitter.com/kempanrb?lang=id">
-              <Image w="4rem" src={twitter} />
+              <Image w={{base:"2rem", lg:"4rem"}} src={twitter} />
             </a>
             <a href="https://www.instagram.com/kemenpanrb/">
-              <Image w="4rem" src={instagram} />
+              <Image w={{base:"2rem", lg:"4rem"}} src={instagram} />
             </a>
             <a href="https://www.youtube.com/channel/UC4Tl2xUO_sjUNs-SfedTmEg">
-              <Image w="4rem" src={youtube} />
+              <Image w={{base:"2rem", lg:"4rem"}} src={youtube} />
             </a>
           </Stack>
         </Flex>

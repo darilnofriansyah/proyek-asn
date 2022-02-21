@@ -4,6 +4,7 @@ import CustomTable from "../../../components/table";
 import Papa from "papaparse";
 import LoadingSpinner from "../../../components/loadingspinner";
 import ColumnFilter from "../../../components/columnfilter";
+import { useTranslation } from "react-i18next";
 
 export default function JFStrategis() {
   const [data, setData] = useState([]);
@@ -52,21 +53,17 @@ export default function JFStrategis() {
     },
   ];
 
+  const {t} = useTranslation();
+  
   return (
     <>
       {loading ? (
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">JF Strategis 2020-2021</Heading>
+          <Heading mb="4rem">{t("title_daftar_jf_strategis")}</Heading>
           <Text fontSize="xl" mb="2rem">
-            JF Strategis 2020-2021 merupakan nama-nama jabatan fungsional yang
-            ditetapkan dalam Permenpan RB periode tahun 2020-2021 dan sesuai
-            dengan kebutuhan Proyek Prioritas Strategis Nasional. Usulan daftar
-            jabatan ini berasal dari focus group discussion dengan para K/L
-            pelaksana program prioritas strategis, analisis data peta okupasi
-            nasional dan KBJI serta dari kajian literatur terhadap increasing
-            demand dari studi World Economic Forum (2020).
+            {t("description_daftar_jf_strategis")}
           </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>

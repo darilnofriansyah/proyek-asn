@@ -4,6 +4,7 @@ import CustomTable from "../../../components/table";
 import Papa from "papaparse";
 import LoadingSpinner from "../../../components/loadingspinner";
 import ColumnFilter from "../../../components/columnfilter";
+import { useTranslation } from "react-i18next";
 
 export default function LongList() {
   const [data, setData] = useState([]);
@@ -67,18 +68,17 @@ export default function LongList() {
     },
   ];
 
+  const {t} = useTranslation();
+
   return (
     <>
       {loading ? (
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">Daftar Jabatan Kritikal</Heading>
+          <Heading mb="4rem">{t("title_daftar_jabatan_kritikal")}</Heading>
           <Text fontSize="xl" mb="2rem">
-            Daftar Jabatan Kritikal adalah Jabatan Fungsional yang memiliki
-            tingkat kekritisan tinggi dilihat dari beberapa indikator yang telah
-            ditetapkan, dampak dari otomasi pekerjaan, dan sesuai dengan proyek
-            prioritas strategis nasional (Major Project).
+            {t("description_daftar_jabatan_kritikal")}
           </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>

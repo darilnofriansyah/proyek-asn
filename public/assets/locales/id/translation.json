@@ -24,11 +24,11 @@
             "description": "Kesenjangan permintaan dan ketersediaan tenaga kerja dengan keterampilan tertentu"
         },
         {
-            "title": "HIGH-SKILLED",
+            "title": "STRATEGIC",
             "description": "Keterampilan tertentu yang sesuai dengan tujuan pembangunan strategis negara"
         },
         {
-            "title": "STRATEGIC",
+            "title": "HIGH-SKILLED",
             "description": "Jabatan Kritikal mengidentifikasi pekerjaan dengan keterampilan tertentu"
         }
     ],
@@ -140,10 +140,37 @@
             "Dovetailing: Pada tahap dovetailing, terdapat proses dovetailing dan validasi untuk menentukan ragam okupasi kritikal yang tepat. Pada tahap dovetailing, bukti dari pendekatan top-down dan bottom-up diintegrasikan untuk membuat kesimpulan tentang justifikasi apakah pekerjaan tersebut harus dimasukkan dalam daftar Ragam Okupasi Kritikal final. Pekerjaan yang memiliki kategori 'kekurangan' dan 'strategis' diidentifikasi melalui beberapa langkah pelengkap. Kemudian, setelah mengintegrasikan bukti dari pendekatan top down dan bottom up, dilakukan proses validasi dengan melakukan diskusi dengan para pemangku kepentingan agar dapat memberikan masukan tentang daftar kekurangan yang diusulkan untuk memastikan bahwa pekerjaan termasuk yang memiliki kepentingan strategis."
         ]
     },
+    "title_daftar_jabatan_kritikal":"Daftar Jabatan Kritikal",
+    "description_daftar_jabatan_kritikal":"Daftar Jabatan Kritikal adalah Jabatan Fungsional yang memiliki tingkat kekritisan tinggi dilihat dari beberapa indikator yang telah ditetapkan, dampak dari otomasi pekerjaan, dan sesuai dengan proyek prioritas strategis nasional (Major Project).",
+    "title_daftar_jabatan_proyektif":"Daftar Jabatan Kritikal Proyektif",
+    "description_daftar_jabatan_proyektif":"Daftar proyektif jabatan kritikal (future jobs) merupakan nama-nama jabatan yang belum ada di daftar jabatan ASN saat ini namun dibutuhkan di masa mendatang sesuai dengan Proyek Prioritas Strategis Nasional. Usulan daftar jabatan ini berasal dari focus group discussion dengan para K/L pelaksana program prioritas strategis, analisis data peta okupasi nasional dan KBJI serta dari kajian literatur terhadap increasing demand dari studi World Economic Forum (2020).",
+    "title_daftar_jf_strategis":"JF Strategis 2020-2021",
+    "description_daftar_jf_strategis":"JF Strategis 2020-2021 merupakan nama-nama jabatan fungsional yang ditetapkan dalam Permenpan RB periode tahun 2020-2021 dan sesuai dengan kebutuhan Proyek Prioritas Strategis Nasional. Usulan daftar jabatan ini berasal dari focus group discussion dengan para K/L pelaksana program prioritas strategis, analisis data peta okupasi nasional dan KBJI serta dari kajian literatur terhadap increasing demand dari studi World Economic Forum (2020).",
+    "title_daftar_kritikal_jpt":"Daftar Jabatan Kritikal Jabatan Pimpinan Tinggi",
+    "description_daftar_kritikal_jpt":"Data ini merupakan daftar jabatan kritikal jenjang JPT yang berkontribusi pada proyek prioritas strategis nasional (Major Project) dan visi Presiden. Data dipisahkan atas jenjang JPT dan dilengkapi dengan instansi pengampu jabatan pimpinan tinggi pada proyek prioritas strategis maupun visi presiden.",
+    "description2_daftar_kritikal_jpt":"Jabatan dengan kategori tertentu artinya diampu oleh kementerian/lembaga khusus, jabatan dengan keterangan instansi pusat menandakan bahwa jabatan tersebut terdapat pada beberapa K/L di Pemerintah Pusat, jabatan dengan keterangan Instansi Daerah menandakan bahwa jabatan tersebut terdapat pada beberapa K/L di Pemerintah Daerah. Sedangkan jabatan dengan keterangan “instansi pusat-instansi daerah” sifatnya terbuka atau kebutuhan akan jabatan tersebut tidak hanya di satu instansi tertentu melainkan ada di Pemerintah Pusat di Daerah.",
+    "title_major_project_overview":"Daftar Jabatan Kritikal, Major Project, dan Level Kompetensi",
+    "description1_major_project_overview":"Daftar ini memberikan informasi nama jabatan yang mendukung program prioritas strategis nasional (major project) dan visi presiden. Nama jabatan dibedakan dari jenis jabatannya. Pertama yakni menampilkan nama jabatan dengan jenis JPT. Kedua yakni menampilan nama jabatan berdasarkan jenis JF yang sudah ditetapkan dalam Permenpan, sedangkan ketiga merupakan nama jabatan fungsional yang bersifat strategis dan diusulkan menjadi nama jabatan baru untuk memperkuat pelaksanaan program prioritas strategis dan visi presiden. Ketiga hal ini dapat dilihat melalui sub-menu “JPT Kritikal”, “JF Kritikal”, serta “JF Proyektif Kritikal”.",
+    "description2_major_project_overview":"Penentuan level kompetensi ditentukan dengan 2 jenis kompetensi yaitu berdasarkan Permenpan no.38 tahun 2017 dan Penyesuaian berdasarkan standar KKNI (SKKNI).",
+    "description3_major_project_overview":"Untuk level kompetensi JPT berdasarkan Permenpan no. 38 tahun 2017 masuk ke dalam level kompetensi 4-5 (JPT Pratama dan Madya) sedangkan level kompetensi SKKNI disetarakan dengan level 8 - 9 yaitu lulusan Magister Terapan dan Magister paling rendah setara dengan jenjang 8; lulusan Doktor Terapan dan Doktor setara dengan jenjang 9 dan lulusan pendidikan spesialis setara dengan jenjang 8 atau 9.",
+    "description4_major_project_overview":"Untuk level kompetensi JF dan Future jobs berdasarkan permenpan 38 tahun 2017 masuk kedalam level kompetensi level 2 - 4 (jenjang Pertama s.d Utama) sedangkan level kompetensi SKKNI disetarakan dengan level 6-9 yaitu lulusan Diploma 4 atau Sarjana Terapan dan Sarjana paling rendah setara dengan jenjang 6; lulusan Magister Terapan dan Magister paling rendah setara dengan jenjang 8; lulusan Doktor Terapan dan Doktor setara dengan jenjang 9; lulusan pendidikan profesi setara dengan jenjang 7 atau 8; lulusan pendidikan spesialis setara dengan jenjang 8 atau 9.",
 
     "header_about":"Tentang",
     "header_methodology":"Metodologi",
+    "header_methodology_ikthisar":"Ikhtisar",
+    "header_methodology_topdown":"Top Down",
+    "header_methodology_bottomup":"Bottom Up",
+    "header_methodology_dovetailing":"Dovetailing",
     "header_col":"Okupasi Kritikal",
+    "header_col_daftar_jabatan_kritikal":"Daftar Jabatan Kritikal",
+    "header_col_daftar_jabatan_kritikal_proyektif":"Daftar Jabatan Kritikal Proyektif",
+    "header_col_daftar_jabatan_jf_strategis":"JF Strategis 2020-2021",
+    "header_col_daftar_jpt_kritikal":"JPT Kritikal",
+    "header_col_major_project":"Daftar Jabatan Kritikal, Major Project, dan Level Kompetensi",
+    "header_col_major_project_overview":"Deskripsi",
+    "header_col_major_project_jpt_kritikal":"JPT Kritikal",
+    "header_col_major_project_jf_kritikal":"JF Kritikal",
+    "header_col_major_project_jf_proyektif":"JF Proyektif Kritikal",
     "header_contact":"Kontak",
     "header_faq":"FAQ",
     "footer": "Ragam Okupasi Kritikal ASN Indonesia merupakan hasil kolaborasi antara:"
