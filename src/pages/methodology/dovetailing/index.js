@@ -6,7 +6,11 @@ import dovetailing from "../../../assets/images/chart/dovetailing.png";
 export default function Dovetailing() {
   const { t } = useTranslation();
   return (
-    <Flex pt="4rem" px="4rem" direction="column">
+    <Flex
+      pt={{ base: "2rem", lg: "4rem" }}
+      px={{ base: "2rem", lg: "4rem" }}
+      direction="column"
+    >
       <Heading
         mb="2rem"
         textColor="red.600"
@@ -20,20 +24,20 @@ export default function Dovetailing() {
       <Flex
         alignItems="center"
         justifyContent="center"
-        pt="4rem"
-        px="4rem"
+        pt={{base:"2rem", lg:"4rem"}}
+        px={{base:"0rem", lg:"4rem"}}
         direction="column"
         textAlign="center"
       >
-        <Heading mb="4rem" fontSize={{ base: "lg", xl: "2xl", "2xl": "4xl" }}>
+        <Heading mb={{base:"2rem", lg:"4rem"}} fontSize={{ base: "lg", xl: "2xl", "2xl": "4xl" }}>
           {t("diagram_dovetailing")}
         </Heading>
         <Image mb="1rem" src={dovetailing} />
-        <Text mb="4rem" fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
+        <Text mb={{base:"2rem", lg:"4rem"}} fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
           {t("diagram_notes_dovetailing")}
         </Text>
       </Flex>
-      <Text mb="4rem" fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
+      <Text mb={{base:"2rem", lg:"4rem"}} fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
         {t("notes1_dovetailing")}
       </Text>
     </Flex>

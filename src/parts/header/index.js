@@ -22,6 +22,7 @@ import {
   AccordionIcon,
   List,
   ListItem,
+  Divider,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -101,16 +102,16 @@ export default function Header() {
               </MenuButton>
               <MenuList>
                 <a href="/metodologi/overview">
-                  <MenuItem>Ikhtisar</MenuItem>
+                  <MenuItem>{t("header_methodology_ikthisar")}</MenuItem>
                 </a>
                 <a href="/metodologi/topdown">
-                  <MenuItem>Top Down</MenuItem>
+                  <MenuItem>{t("header_methodology_topdown")}</MenuItem>
                 </a>
                 <a href="/metodologi/bottomup">
-                  <MenuItem>Bottom Up</MenuItem>
+                  <MenuItem>{t("header_methodology_bottomup")}</MenuItem>
                 </a>
                 <a href="/metodologi/dovetailing">
-                  <MenuItem>Dovetailing</MenuItem>
+                  <MenuItem>{t("header_methodology_dovetailing")}</MenuItem>
                 </a>
               </MenuList>
             </Menu>
@@ -130,57 +131,47 @@ export default function Header() {
               </MenuButton>
               <MenuList>
                 <Link to="/daftar-jabatan-kritikal">
-                  <MenuItem>Daftar Jabatan Kritikal</MenuItem>
+                  <MenuItem>{t("header_col_daftar_jabatan_kritikal")}</MenuItem>
                 </Link>
-                {/* <Link to="/rekomendasi-ja-jf">
-                  <MenuItem>Rekomendasi JA ke JF</MenuItem>
-                </Link> */}
                 <Link to="/proyeksi-masa-datang">
-                  <MenuItem>Daftar Jabatan Kritikal Proyektif</MenuItem>
+                  <MenuItem>
+                    {t("header_col_daftar_jabatan_kritikal_proyektif")}
+                  </MenuItem>
                 </Link>
                 <Link to="/jf-strategis">
-                  <MenuItem>JF Strategis 2020-2021</MenuItem>
+                  <MenuItem>
+                    {t("header_col_daftar_jabatan_jf_strategis")}
+                  </MenuItem>
                 </Link>
                 <Link to="/jpt-kritikal">
-                  <MenuItem>JPT Kritikal</MenuItem>
+                  <MenuItem>{t("header_col_daftar_jpt_kritikal")}</MenuItem>
                 </Link>
                 <Accordion allowToggle>
                   <AccordionItem>
                     <AccordionButton>
                       <Box flex="1" textAlign="left">
-                        <Text>
-                          Daftar Jabatan Kritikal, Major Project, dan Level
-                          Kompetensi
-                        </Text>
+                        <Text>{t("header_col_major_project")}</Text>
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>
                     <AccordionPanel pb={4}>
                       <Stack>
-                        <Link to="/core-competence">Deskripsi</Link>
-                        <Link to="/core-competence/jabatan-pimpinan-tinggi">JPT Kritikal</Link>
-                        <Link to="/core-competence/jabatan-fungsional">JF Kritikal</Link>
-                        <Link to="/core-competence/future-jobs">JF Proyektif Kritikal</Link>
+                        <Link to="/core-competence">
+                          {t("header_col_major_project_overview")}
+                        </Link>
+                        <Link to="/core-competence/jabatan-pimpinan-tinggi">
+                          {t("header_col_major_project_jpt_kritikal")}
+                        </Link>
+                        <Link to="/core-competence/jabatan-fungsional">
+                          {t("header_col_major_project_jf_kritikal")}
+                        </Link>
+                        <Link to="/core-competence/future-jobs">
+                          {t("header_col_major_project_jf_proyektif")}
+                        </Link>
                       </Stack>
                     </AccordionPanel>
                   </AccordionItem>
                 </Accordion>
-                {/* <Menu>
-                  <MenuButton>
-                    Daftar Jabatan Kritikal, Major Project, dan Level Kompetensi
-                  </MenuButton>
-                  <MenuList>
-                    <Link to="/jpt-kritikal">
-                      <MenuItem>Kompetensi Utama JPT Kritikal</MenuItem>
-                    </Link>
-                    <Link to="/jpt-kritis">
-                      <MenuItem>Kompetensi Utama JF Kritikal</MenuItem>
-                    </Link>
-                    <Link to="/core-competence">
-                      <MenuItem>Kompetensi Utama JF Proyektif</MenuItem>
-                    </Link>
-                  </MenuList>
-                </Menu> */}
               </MenuList>
             </Menu>
             <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
@@ -234,15 +225,17 @@ export default function Header() {
                 <DrawerBody>
                   <Accordion allowToggle>
                     <AccordionItem>
-                      <AccordionButton>
-                        <Box flex="1" textAlign="left">
-                          <Heading
-                            fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
-                          >
-                            <a href="/about">{t("header_about")}</a>
-                          </Heading>
-                        </Box>
-                      </AccordionButton>
+                      <a href="/about">
+                        <AccordionButton>
+                          <Box flex="1" textAlign="left">
+                            <Heading
+                              fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
+                            >
+                              {t("header_about")}
+                            </Heading>
+                          </Box>
+                        </AccordionButton>
+                      </a>
                     </AccordionItem>
                     <AccordionItem>
                       <AccordionButton>
@@ -255,10 +248,24 @@ export default function Header() {
                       </AccordionButton>
                       <AccordionPanel pb={4} fontSize="md">
                         <List spacing="1rem">
-                          <ListItem>Ikhtisar</ListItem>
-                          <ListItem>Top Down</ListItem>
-                          <ListItem>Bottom Up</ListItem>
-                          <ListItem>Dovetailing</ListItem>
+                          <a href="/metodologi/overview">
+                            <ListItem>
+                              {t("header_methodology_ikthisar")}
+                            </ListItem>
+                          </a>
+                          <a href="/metodologi/topdown">
+                            <ListItem>
+                              {t("header_methodology_topdown")}
+                            </ListItem>
+                          </a>
+                          <a href="/metodologi/bottomup">
+                            <ListItem>
+                              {t("header_methodology_bottomup")}
+                            </ListItem>
+                          </a>
+                          <a href="/metodologi/dovetailing">
+                            <ListItem>Dovetailing</ListItem>
+                          </a>
                         </List>
                       </AccordionPanel>
                     </AccordionItem>
@@ -271,38 +278,102 @@ export default function Header() {
                       </AccordionButton>
                       <AccordionPanel pb={4} fontSize="md">
                         <List spacing="1rem">
-                          <ListItem>Daftar Jabatan Kritikal</ListItem>
-                          <ListItem>Rekmoendasi JA ke JF</ListItem>
-                          <ListItem>Proyeksi Masa Datang</ListItem>
-                          <ListItem>JF Strategis 2020-2021</ListItem>
-                          <ListItem>JPT Kritikal</ListItem>
-                          <ListItem>Kompensansi Utama JPT Kritikal</ListItem>
-                          <ListItem>Kompetensi Utama JF Kritikal</ListItem>
-                          <ListItem>Kompetensi Utama JF Proyektif</ListItem>
+                          <Link to="/daftar-jabatan-kritikal">
+                            <ListItem>
+                              {t("header_col_daftar_jabatan_kritikal")}
+                            </ListItem>
+                          </Link>
+                          <Link to="/proyeksi-masa-datang">
+                            <ListItem>
+                              {t(
+                                "header_col_daftar_jabatan_kritikal_proyektif"
+                              )}
+                            </ListItem>
+                          </Link>
+                          <Link to="/jf-strategis">
+                            <ListItem>
+                              {t("header_col_daftar_jabatan_jf_strategis")}
+                            </ListItem>
+                          </Link>
+                          <Link to="/jpt-kritikal">
+                            <ListItem>
+                              {t("header_col_daftar_jpt_kritikal")}
+                            </ListItem>
+                          </Link>
+                          <ListItem>
+                            <Text as="b">{t("header_col_major_project")}</Text>
+                          </ListItem>
+                          <Divider />
+                          <Link to="/core-competence">
+                            <ListItem>
+                              {t("header_col_major_project_overview")}
+                            </ListItem>
+                          </Link>
+                          <Link to="/core-competence/jabatan-pimpinan-tinggi">
+                            <ListItem>
+                              {t("header_col_major_project_jpt_kritikal")}
+                            </ListItem>
+                          </Link>
+                          <Link to="/core-competence/jabatan-fungsional">
+                            <ListItem>
+                              {t("header_col_major_project_jf_kritikal")}
+                            </ListItem>
+                          </Link>
+                          <Link to="/core-competence/future-jobs">
+                            <ListItem>
+                              {t("header_col_major_project_jf_proyektif")}
+                            </ListItem>
+                          </Link>
                         </List>
                       </AccordionPanel>
                     </AccordionItem>
                     <AccordionItem>
-                      <AccordionButton>
-                        <Box flex="1" textAlign="left">
-                          <Heading
-                            fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
-                          >
-                            <a href="/contact">{t("header_contact")}</a>
-                          </Heading>
-                        </Box>
-                      </AccordionButton>
+                      <a href="/contact">
+                        <AccordionButton>
+                          <Box flex="1" textAlign="left">
+                            <Heading
+                              fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
+                            >
+                              {t("header_contact")}
+                            </Heading>
+                          </Box>
+                        </AccordionButton>
+                      </a>
+                    </AccordionItem>
+                    <AccordionItem>
+                      <a href="/faq">
+                        <AccordionButton>
+                          <Box flex="1" textAlign="left">
+                            <Heading
+                              fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
+                            >
+                              {t("header_faq")}
+                            </Heading>
+                          </Box>
+                        </AccordionButton>
+                      </a>
                     </AccordionItem>
                     <AccordionItem>
                       <AccordionButton>
                         <Box flex="1" textAlign="left">
-                          <Heading
-                            fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
-                          >
-                            <a href="/faq">{t("header_faq")}</a>
-                          </Heading>
+                          <GlobeIcon/>
                         </Box>
+                        <AccordionIcon />
                       </AccordionButton>
+                      <AccordionPanel pb={4} fontSize="md">
+                        <List>
+                          {languages.map(({ code, name, country_code }) => (
+                            <ListItem
+                              onClick={() => {
+                                i18next.changeLanguage(code);
+                              }}
+                              key={country_code}
+                            >
+                              <a href="#">{name}</a>
+                            </ListItem>
+                          ))}
+                        </List>
+                      </AccordionPanel>
                     </AccordionItem>
                   </Accordion>
                 </DrawerBody>

@@ -16,7 +16,7 @@ export default function Topdown() {
   const { t } = useTranslation();
 
   return (
-    <Flex pt="4rem" px="4rem">
+    <Flex pt={{base:"2rem", lg:"4rem"}} px={{base:"2rem", lg:"4rem"}}>
       {/* Metodologi Top Down */}
       <Stack spacing="2rem" mb="2rem">
         <Heading
@@ -35,7 +35,7 @@ export default function Topdown() {
           {t("diagram_topdown")}
         </Text>
         <SimpleGrid
-          px={{ base: "2rem", "2xl": "5rem" }}
+          px={{ base: "0", "2xl": "5rem" }}
           spacing={{ base: "2rem", "2xl": "5rem" }}
           columns={{ base: 1, lg: 3 }}
         >
@@ -52,7 +52,7 @@ export default function Topdown() {
                 <Flex
                   borderRadius="10px 10px 0px 0px"
                   pt="2rem"
-                  px="4rem"
+                  px={{base:"1rem", lg:"2rem", "2xl":"4rem"}}
                   bgColor="yellowSecondary"
                 >
                   <Stack mb="2rem" direction="row">
@@ -62,7 +62,7 @@ export default function Topdown() {
                     </Heading>
                   </Stack>
                 </Flex>
-                <Flex direction="column" px="4rem">
+                <Flex direction="column" px={{base:"1rem", lg:"2rem", "2xl":"4rem"}}>
                   {content.map((list) => (
                     <>
                       <Text fontSize="lg" py="1rem">

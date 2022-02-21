@@ -4,6 +4,7 @@ import CustomTable from "../../../components/table";
 import Papa from "papaparse";
 import LoadingSpinner from "../../../components/loadingspinner";
 import ColumnFilter from "../../../components/columnfilter";
+import { useTranslation } from "react-i18next";
 
 export default function Proyeksi() {
   const [data, setData] = useState([]);
@@ -52,22 +53,17 @@ export default function Proyeksi() {
     },
   ];
 
+  const {t} = useTranslation();
+
   return (
     <>
       {loading ? (
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="4rem">Daftar Jabatan Kritikal Proyektif</Heading>
+          <Heading mb="4rem">{t("title_daftar_jabatan_proyektif")}</Heading>
           <Text fontSize="xl" mb="2rem">
-            Daftar proyektif jabatan kritikal (future jobs) merupakan nama-nama
-            jabatan yang belum ada di daftar jabatan ASN saat ini namun
-            dibutuhkan di masa mendatang sesuai dengan Proyek Prioritas
-            Strategis Nasional. Usulan daftar jabatan ini berasal dari focus
-            group discussion dengan para K/L pelaksana program prioritas
-            strategis, analisis data peta okupasi nasional dan KBJI serta dari
-            kajian literatur terhadap increasing demand dari studi World
-            Economic Forum (2020).
+            {t("description_daftar_jabatan_proyektif")}
           </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>

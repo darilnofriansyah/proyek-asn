@@ -19,7 +19,11 @@ import target from "../../../assets/images/icon/target.png";
 export default function Bottomup() {
   const { t } = useTranslation();
   return (
-    <Flex pt="4rem" px="4rem" mb="2rem">
+    <Flex
+      pt={{ base: "2rem", lg: "4rem" }}
+      px={{ base: "2rem", lg: "4rem" }}
+      mb="2rem"
+    >
       {/* Metodologi Top Down */}
       <Stack spacing="2rem">
         <Heading
@@ -50,30 +54,37 @@ export default function Bottomup() {
                 mb="1rem"
                 color="white"
                 bgColor="red.600"
+                direction={{base:"column", lg:"row"}}
               >
                 <Stack
-                  borderRadius="20px 0px 0px 20px"
-                  p="4rem"
+                  borderRadius={{base:"20px 20px 0px 0px", lg: "20px 0px 0px 20px"}}
+                  p={{base:"2rem",lg:"4rem"}}
                   bgColor="red.700"
+                  justifyContent="center"
+                  alignItems="center"
                 >
                   <Image
                     src="https://cdn.kibrispdr.org/data/gambar-gear-png-0.png"
-                    width="7rem"
+                    width={{base:"5rem", lg:"7rem"}}
                   />
-                  <Heading fontSize={{ base: "xl", xl: "4xl", "2xl": "6xl" }}>
+                  <Heading fontSize={{ base: "2xl", xl: "4xl", "2xl": "6xl" }}>
                     {title}
                   </Heading>
                 </Stack>
-                <Stack py="3rem" px="5rem" spacing="3rem">
+                <Stack py="3rem" px={{base:"2rem", lg:"5rem"}} spacing="3rem">
                   <List spacing={3}>
                     {content.map((list) => (
-                      <ListItem fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
+                      <ListItem
+                        fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}
+                      >
                         <ListIcon as={ChevronRightIcon} />
                         {list}
                       </ListItem>
                     ))}
                   </List>
-                  <Text fontSize={{ base: "sm", xl: "md", "2xl": "lg" }}>{note}</Text>
+                  <Text fontSize={{ base: "sm", xl: "md", "2xl": "lg" }}>
+                    {note}
+                  </Text>
                 </Stack>
               </Flex>
             )
@@ -82,7 +93,7 @@ export default function Bottomup() {
         <List spacing={3}>
           {t("description2_bottomup", { returnObjects: true }).map((list) => (
             <ListItem fontSize={{ base: "lg", xl: "lg", "2xl": "2xl" }}>
-              <ListIcon mr="2rem" as={ArrowRightIcon} />
+              <ListIcon mr={{ base: "1rem", "2xl": "2rem" }} as={ArrowRightIcon} />
               {list}
             </ListItem>
           ))}
