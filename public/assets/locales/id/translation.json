@@ -24,12 +24,12 @@
             "description": "Kesenjangan permintaan dan ketersediaan tenaga kerja dengan keterampilan tertentu"
         },
         {
-            "title": "STRATEGIC",
-            "description": "Keterampilan tertentu yang sesuai dengan tujuan pembangunan strategis negara"
-        },
-        {
             "title": "HIGH-SKILLED",
             "description": "Jabatan Kritikal mengidentifikasi pekerjaan dengan keterampilan tertentu"
+        },
+        {
+            "title": "STRATEGIC",
+            "description": "Keterampilan tertentu yang sesuai dengan tujuan pembangunan strategis negara"
         }
     ],
     "description3_about":[
@@ -154,6 +154,13 @@
     "description2_major_project_overview":"Penentuan level kompetensi ditentukan dengan 2 jenis kompetensi yaitu berdasarkan Permenpan no.38 tahun 2017 dan Penyesuaian berdasarkan standar KKNI (SKKNI).",
     "description3_major_project_overview":"Untuk level kompetensi JPT berdasarkan Permenpan no. 38 tahun 2017 masuk ke dalam level kompetensi 4-5 (JPT Pratama dan Madya) sedangkan level kompetensi SKKNI disetarakan dengan level 8 - 9 yaitu lulusan Magister Terapan dan Magister paling rendah setara dengan jenjang 8; lulusan Doktor Terapan dan Doktor setara dengan jenjang 9 dan lulusan pendidikan spesialis setara dengan jenjang 8 atau 9.",
     "description4_major_project_overview":"Untuk level kompetensi JF dan Future jobs berdasarkan permenpan 38 tahun 2017 masuk kedalam level kompetensi level 2 - 4 (jenjang Pertama s.d Utama) sedangkan level kompetensi SKKNI disetarakan dengan level 6-9 yaitu lulusan Diploma 4 atau Sarjana Terapan dan Sarjana paling rendah setara dengan jenjang 6; lulusan Magister Terapan dan Magister paling rendah setara dengan jenjang 8; lulusan Doktor Terapan dan Doktor setara dengan jenjang 9; lulusan pendidikan profesi setara dengan jenjang 7 atau 8; lulusan pendidikan spesialis setara dengan jenjang 8 atau 9.",
+    "title_daftar_jabatan_pimpinan_kritikal":"Jabatan Pimpinan Tinggi Kritikal",
+    "description_daftar_jabatan_pimpinan_kritikal":"Daftar ini menampilkan nama jabatan dengan jenis Jabatan Pimpinan Tinggi yang kritikal.",
+    "title_daftar_jabatan_fungsional_kritikal":"Jabatan Fungsional Kritikal",
+    "description_daftar_jabatan_fungsional_kritikal":"Daftar ini menampilan nama jabatan berdasarkan jenis Jabatan Fungsional yang sudah ditetapkan dalam Permenpan dan bersifat kritikal (JF Kritikal).",
+    "title_daftar_jabatan_fungsional_proyektif_kritikal":"Jabatan Fungsional Proyektif Kritikal",
+    "description_daftar_jabatan_fungsional_proyektif_kritikal":"Daftar ini merupakan nama Jabatan Fungsional yang bersifat strategis dan diusulkan menjadi nama jabatan baru (JF Proyektif) untuk memperkuat pelaksanaan program prioritas strategis dan visi presiden.",
+
 
     "header_about":"Tentang",
     "header_methodology":"Metodologi",

@@ -13,6 +13,7 @@ import CustomTable from "../../../../components/table";
 import Papa from "papaparse";
 import LoadingSpinner from "../../../../components/loadingspinner";
 import ColumnFilter from "../../../../components/columnfilter";
+import { useTranslation } from "react-i18next";
 
 export default function JabatanFungsional() {
   const [data, setData] = useState([]);
@@ -75,17 +76,17 @@ export default function JabatanFungsional() {
     },
   ];
 
+  const {t} = useTranslation();
+
   return (
     <>
       {loading ? (
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="2rem">Jabatan Fungsional Kritikal</Heading>
+          <Heading mb="2rem">{t("title_daftar_jabatan_fungsional_kritikal")}</Heading>
           <Text mb="1rem" fontSize={{ base: "lg", xl: "lg", "2xl": "xl" }}>
-            Daftar ini menampilan nama jabatan berdasarkan jenis Jabatan
-            Fungsional yang sudah ditetapkan dalam Permenpan dan bersifat
-            kritikal (JF Kritikal).
+            {t("description_daftar_jabatan_fungsional_kritikal")}
           </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>

@@ -13,6 +13,7 @@ import CustomTable from "../../../../components/table";
 import Papa from "papaparse";
 import LoadingSpinner from "../../../../components/loadingspinner";
 import ColumnFilter from "../../../../components/columnfilter";
+import { useTranslation } from "react-i18next";
 
 export default function JabatanPT() {
   const [data, setData] = useState([]);
@@ -75,16 +76,17 @@ export default function JabatanPT() {
     },
   ];
 
+  const {t} = useTranslation();
+
   return (
     <>
       {loading ? (
         <LoadingSpinner />
       ) : (
         <Flex direction="column" pt="4rem" px="4rem">
-          <Heading mb="2rem">Jabatan Pimpinan Tinggi Kritikal</Heading>
+          <Heading mb="2rem">{t("title_daftar_jabatan_pimpinan_kritikal")}</Heading>
           <Text mb="1rem" fontSize={{ base: "lg", xl: "lg", "2xl": "xl" }}>
-            Daftar ini menampilkan nama jabatan dengan jenis Jabatan Pimpinan
-            Tinggi yang kritikal.
+            {t("description_daftar_jabatan_pimpinan_kritikal")}
           </Text>
           <CustomTable customColumns={columns} customData={data} />
         </Flex>

@@ -29,8 +29,8 @@ export default function Topdown() {
           {t("description_topdown")}
         </Text>
         <Text
-          fontWeight="400"
           fontSize={{ base: "lg", xl: "2xl", "2xl": "4xl" }}
+          as='b'
         >
           {t("diagram_topdown")}
         </Text>
