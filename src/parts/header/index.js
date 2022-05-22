@@ -207,7 +207,7 @@ export default function Header() {
               </MenuList>
             </Menu>
           <Image
-            src={logo}
+            src={slogan}
             width={{ base: "90px", lg: "150px", "2xl": "210px" }}
             minW="90px"
           />
