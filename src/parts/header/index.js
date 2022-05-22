@@ -27,6 +27,7 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo/logo_panrb.png";
+import slogan from "../../assets/images/logo/berakhlak-bangga-melayani-bangsa.png";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery } from "@chakra-ui/react";
@@ -205,6 +206,11 @@ export default function Header() {
                 ))}
               </MenuList>
             </Menu>
+          <Image
+            src={logo}
+            width={{ base: "90px", lg: "150px", "2xl": "210px" }}
+            minW="90px"
+          />
           </>
         ) : (
           <>
