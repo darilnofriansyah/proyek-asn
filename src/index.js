@@ -18,6 +18,7 @@ i18n
   .init({
     supportedLngs: ["en", "id"],
     fallbackLng: "id",
+    lng: "id", //default language
     debug: false,
     //language detector
     detection: {
