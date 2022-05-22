@@ -10,19 +10,19 @@ import cookies from "js-cookie";
 
 const languages = [
   {
-    code: "en",
-    name: "English",
-    country_code: "en",
-  },
-  {
     code: "id",
     name: "Indonesia",
     country_code: "id",
   },
+  {
+    code: "en",
+    name: "English",
+    country_code: "en",
+  },
 ];
 
 export default function App() {
-  const currentLanguageCode = cookies.get("il8next") || "en";
+  const currentLanguageCode = cookies.get("il8next") || "id";
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
 
   return (
