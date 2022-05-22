@@ -214,6 +214,11 @@ export default function Header() {
           </>
         ) : (
           <>
+            <Image
+              src={slogan}
+              width={{ base: "90px", lg: "150px", "2xl": "210px" }}
+              minW="90px"
+            />
             <Button ref={btnRef} onClick={onOpen}>
               <HamburgerIcon />
             </Button>
