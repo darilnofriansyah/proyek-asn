@@ -65,8 +65,8 @@ export default function Header() {
   const btnRef = React.useRef();
 
   return (
-    <Flex gap='2' px={{ base: "2rem", xl: "3rem", "2xl": "5rem" }} py={5}>
-      <Box p='2'>
+    <Flex gap='5' px={{ base: "2rem", xl: "3rem", "2xl": "5rem" }} py={5}>
+      <Box p='2' pl ='2rem'>
         <a href="/">
           <Image
             src={logo}
