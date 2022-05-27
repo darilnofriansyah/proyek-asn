@@ -65,14 +65,16 @@ export default function Header() {
   const btnRef = React.useRef();
 
   return (
-    <Flex px={{ base: "2rem", xl: "5rem", "2xl": "10rem" }} py={5}>
-      <a href="/">
-        <Image
-          src={logo}
-          width={{ base: "90px", xl: "125px", "2xl": "210px" }}
-          minW="90px"
-        />
-      </a>
+    <Flex gap='2' px={{ base: "2rem", xl: "3rem", "2xl": "5rem" }} py={5}>
+      <Box p='2'>
+        <a href="/">
+          <Image
+            src={logo}
+            width={{ base: "90px", xl: "125px", "2xl": "210px" }}
+            minW="90px"
+          />
+        </a>
+      </Box>
       <Spacer />
       <Stack
         direction="row"
