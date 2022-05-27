@@ -70,7 +70,7 @@ export default function Header() {
         <a href="/">
           <Image
             src={logo}
-            maxW={{ base: "90px", lg: "150px", "2xl": "210px" }}
+            width={{ base: "90px", xl: "125px", "2xl": "210px" }}
             minW="90px"
           />
         </a>
