@@ -66,7 +66,7 @@ export default function Header() {
 
   return (
     <Flex px={{ base: "2rem", xl: "5rem", "2xl": "10rem" }} py={5}>
-      <Box mx="auto">
+      <Box mx="2rem">
         <a href="/">
           <Image
             src={logo}
