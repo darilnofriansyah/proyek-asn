@@ -66,15 +66,13 @@ export default function Header() {
 
   return (
     <Flex px={{ base: "2rem", xl: "5rem", "2xl": "10rem" }} py={5}>
-      <Box mx="2rem">
-        <a href="/">
-          <Image
-            src={logo}
-            width={{ base: "90px", xl: "125px", "2xl": "210px" }}
-            minW="90px"
-          />
-        </a>
-      </Box>
+      <a href="/">
+        <Image
+          src={logo}
+          width={{ base: "90px", xl: "125px", "2xl": "210px" }}
+          minW="90px"
+        />
+      </a>
       <Spacer />
       <Stack
         direction="row"
