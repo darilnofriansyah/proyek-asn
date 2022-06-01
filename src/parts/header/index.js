@@ -65,15 +65,13 @@ export default function Header() {
   const btnRef = React.useRef();
 
   return (
-    <Flex gap='5' px={{ base: "2rem", xl: "3rem", "2xl": "5rem" }} py={5}>
+    <Flex gap='3' px={{ base: "2rem", xl: "3rem", "2xl": "5rem" }} py={5}>
       <Box p='2' pl ='2rem'>
-        <a href="/">
-          <Image
-            src={logo}
-            width={{ base: "90px", xl: "125px", "2xl": "210px" }}
-            minW="90px"
-          />
-        </a>
+        <Image
+          src={logo}
+          width={{ base: "90px", xl: "125px", "2xl": "210px" }}
+          minW="90px"
+        />
       </Box>
       <Spacer />
       <Stack
@@ -84,7 +82,10 @@ export default function Header() {
       >
         {responsive ? (
           <>
-            <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
+            <Heading fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
+              <a href="/about">{t("header_about")}</a>
+            </Heading>
+            <Heading fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
               <a href="/about">{t("header_about")}</a>
             </Heading>
             <Menu closeOnBlur="true">
@@ -95,7 +96,7 @@ export default function Header() {
                   spacing={1}
                   direction="row"
                 >
-                  <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
+                  <Heading fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
                     {t("header_methodology")}
                   </Heading>
                   <ChevronDownIcon />
@@ -124,7 +125,7 @@ export default function Header() {
                   spacing={1}
                   direction="row"
                 >
-                  <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
+                  <Heading fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
                     {t("header_col")}
                   </Heading>
                   <ChevronDownIcon />
@@ -175,10 +176,10 @@ export default function Header() {
                 </Accordion>
               </MenuList>
             </Menu>
-            <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
+            <Heading fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
               <a href="/contact">{t("header_contact")}</a>
             </Heading>
-            <Heading fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}>
+            <Heading fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
               <Link to="/FAQ">{t("header_faq")}</Link>
             </Heading>
             <Menu closeOnBlur="true">
@@ -208,8 +209,8 @@ export default function Header() {
             </Menu>
           <Image
             src={slogan}
-            width={{ base: "90px", lg: "150px", "2xl": "210px" }}
-            minW="90px"
+            width={{ base: "100px", lg: "200px", "2xl": "300px" }}
+            minW="100px"
           />
           </>
         ) : (
