@@ -69,8 +69,8 @@ export default function Header() {
       <Box p='2' pl ='2rem'>
         <Image
           src={logo}
-          width={{ base: "90px", xl: "125px", "2xl": "210px" }}
-          minW="90px"
+          width={{ base: "100px", xl: "125px", "2xl": "210px" }}
+          minW="100px"
         />
       </Box>
       <Spacer />
@@ -83,7 +83,7 @@ export default function Header() {
         {responsive ? (
           <>
             <Heading fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
-              <a href="/about">{t("header_about")}</a>
+              <a href="/">{t("header_home")}</a>
             </Heading>
             <Heading fontSize={{ base: "md", xl: "lg", "2xl": "xl" }}>
               <a href="/about">{t("header_about")}</a>
@@ -231,6 +231,19 @@ export default function Header() {
 
                 <DrawerBody>
                   <Accordion allowToggle>
+                    <AccordionItem>
+                      <a href="/">
+                        <AccordionButton>
+                          <Box flex="1" textAlign="left">
+                            <Heading
+                              fontSize={{ base: "md", xl: "xl", "2xl": "2xl" }}
+                            >
+                              {t("header_home")}
+                            </Heading>
+                          </Box>
+                        </AccordionButton>
+                      </a>
+                    </AccordionItem>
                     <AccordionItem>
                       <a href="/about">
                         <AccordionButton>
